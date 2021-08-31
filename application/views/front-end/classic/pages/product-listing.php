@@ -18,13 +18,13 @@
 
 </section>
 <!-- end breadcrumb -->
-<input type="hidden" id="product-filters" value='<?=  (!empty($filters))? escape_array($filters) :""  ?>' data-key="<?= $filters_key ?>" />
+<input type="hidden" id="product-filters" value='<?= (!empty($filters)) ? escape_array($filters) : ""  ?>' data-key="<?= $filters_key ?>" />
 <section class="listing-page content main-content">
-    <div class="product-listing card-solid py-4">
-        <div class="row mx-0">
+    <div class="py-4 product-listing card-solid">
+        <div class="mx-0 row">
             <!-- Dektop Sidebar -->
             <?php if (isset($products['filters']) && !empty($products['filters'])) { ?>
-                <div class=" order-md-1 col-lg-3 filter-section sidebar-filter-sm container pt-2 pb-2 filter-sidebar-view">
+                <div class="container pt-2 pb-2 order-md-1 col-lg-3 filter-section sidebar-filter-sm filter-sidebar-view">
                     <div id="product-filters-desktop">
                         <?php foreach ($products['filters'] as $key => $row) {
                             $row_attr_name = str_replace(' ', '-', $row['name']);
@@ -72,7 +72,7 @@
                 </div>
             <?php } ?>
             <div class="col-md-8 order-md-2 <?= (isset($products['filters']) && !empty($products['filters'])) ? "col-lg-9" : "col-lg-12" ?>">
-                <div class="container-fluid filter-section pt-3  pb-3">
+                <div class="pt-3 pb-3 container-fluid filter-section">
                     <div class="col-12">
                         <div class="dropdown">
                             <div class="filter-bars">
@@ -83,9 +83,9 @@
 
                                 </div>
                             </div>
-                            <div class="col-12 sort-by py-3">
+                            <div class="py-3 col-12 sort-by">
                                 <?php if (isset($products) && !empty($products['product'])) { ?>
-                                    <div class="dropdown float-md-right d-flex mb-4">
+                                    <div class="mb-4 dropdown float-md-right d-flex">
                                         <label class="mr-2 dropdown-label"> <?= !empty($this->lang->line('show')) ? $this->lang->line('show') : 'Show' ?>:</label>
                                         <a class="btn dropdown-border btn-lg dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?= ($this->input->get('per-page', true) ? $this->input->get('per-page', true) : '12') ?> <span class="caret"></span></a>
                                         <a href="#" id="product_grid_view_btn" class="grid-view"><i class="fas fa-th"></i></a>
@@ -115,12 +115,12 @@
                         </div>
                     </div>
                     <?php if (isset($sub_categories) && !empty($sub_categories)) { ?>
-                        <div class="col-md-9 col-sm-12 text-left py-3">
+                        <div class="py-3 text-left col-md-9 col-sm-12">
                             <?php if (isset($single_category) && !empty($single_category)) { ?>
                                 <span class="h3"><?= $single_category['name'] ?> <?= !empty($this->lang->line('category')) ? $this->lang->line('category') : 'Category' ?></span>
                             <?php } ?>
                         </div>
-                        <div class="category-section container-fluid text-center">
+                        <div class="text-center category-section container-fluid">
                             <div class="row">
                                 <?php foreach ($sub_categories as $key => $row) { ?>
                                     <div class="col-md-2 col-sm-6">
@@ -141,7 +141,7 @@
 
                         <?php if (isset($_GET['type']) && $_GET['type'] == "list") { ?>
                             <div class="col-md-12 col-sm-6">
-                                <div class="row mt-4">
+                                <div class="mt-4 row">
                                     <div class="col-12">
                                         <h4 class="h4"><?= !empty($this->lang->line('products')) ? $this->lang->line('products') : 'Products' ?></h4>
                                     </div>
@@ -185,15 +185,15 @@
                                                     <input type="text" class="kv-fa rating-loading" value="<?= $row['rating'] ?>" data-size="sm" title="" readonly>
                                                 </div>
                                                 <p class="text-muted list-product-desc"><?= $row['short_description'] ?></p>
-                                                <div class="price mb-2 list-view-price">
-                                                    <?php if(!empty($row['min_max_price']['special_price'])) {?>
-                                                    <?= $settings['currency'] ?></i><?= number_format($row['min_max_price']['special_price']) ?>
-                                                    <span class="striped-price"><?= $settings['currency'] . ' ' . number_format($row['min_max_price']['min_price']) ?></span>
-                                                    <?php }else{?>
+                                                <div class="mb-2 price list-view-price">
+                                                    <?php if (!empty($row['min_max_price']['special_price'])) { ?>
+                                                        <?= $settings['currency'] ?></i><?= number_format($row['min_max_price']['special_price']) ?>
+                                                        <span class="striped-price"><?= $settings['currency'] . ' ' . number_format($row['min_max_price']['min_price']) ?></span>
+                                                    <?php } else { ?>
                                                         <?= $settings['currency'] ?></i><?= number_format($row['min_max_price']['min_price']) ?>
-                                                    <?php }?>
+                                                    <?php } ?>
                                                 </div>
-                                                <div class="button button-sm m-0 p-0">
+                                                <div class="p-0 m-0 button button-sm">
                                                     <a class="add-to-cart add_to_cart" href="" data-product-id="<?= $row['id'] ?>" data-product-variant-id="<?= $variant_id ?>" data-izimodal-open="<?= $modal ?>">+ <?= !empty($this->lang->line('add_to_cart')) ? $this->lang->line('add_to_cart') : 'Add To Cart' ?></a>
                                                 </div>
                                             </div>
@@ -256,12 +256,12 @@
                     <?php } ?>
 
                     <?php if ((!isset($sub_categories) || empty($sub_categories)) && (!isset($products) || empty($products['product']))) { ?>
-                        <div class="col-12 text-center">
+                        <div class="text-center col-12">
                             <h1 class="h2">No Products Found.</h1>
-                            <a href="<?= base_url('products') ?>" class="button button-rounded button-warning"><?= !empty($this->lang->line('go_to_shop')) ? $this->lang->line('go_to_shop') : 'Go to Shop' ?></a>
+                            <a href="<?= base_url('products') ?>" class="button button-rounded button-warning" style="background-color: #159BFF !important; border: 0;"><?= !empty($this->lang->line('go_to_shop')) ? $this->lang->line('go_to_shop') : 'Go to Shop' ?></a>
                         </div>
                     <?php } ?>
-                    <nav class="text-center mt-4">
+                    <nav class="mt-4 text-center">
                         <?= (isset($links)) ? $links : '' ?>
                     </nav>
                 </div>

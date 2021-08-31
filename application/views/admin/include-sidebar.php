@@ -1,9 +1,9 @@
 <?php $settings = get_settings('system_settings', true); ?>
-<aside class="main-sidebar elevation-2 sidebar-dark-indigo">
+<aside class="main-sidebar elevation-2 sidebar-light-blue" style="background-color: #EEF2F9 !important;">
     <!-- Brand Logo -->
     <a href="<?= base_url('admin/home') ?>" class="brand-link">
         <img src="<?= base_url()  . get_settings('favicon') ?>" alt="<?= $settings['app_name']; ?>" title="<?= $settings['app_name']; ?>" class="brand-image">
-        <span class="brand-text font-weight-light small"><?= $settings['app_name']; ?></span>
+        <span class="brand-text font-weight-light small" style="color: #505153"><?= $settings['app_name']; ?></span>
     </a>
 
     <!-- Sidebar -->
@@ -184,29 +184,29 @@
                     </li>
                 <?php } ?>
                 <?php if (has_permissions('read', 'support_tickets')) { ?>
-                <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link menu-open">
-                        <i class="nav-icon fas fa-ticket-alt text-danger"></i>
-                        <p>
-                            Support Tickets
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="<?= base_url('admin/tickets/ticket-types') ?>" class="nav-link">
-                                <i class="fas fa-money-bill-wave nav-icon"></i>
-                                <p>Ticket Types</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="<?= base_url('admin/tickets') ?>" class="nav-link">
-                                <i class="fas fa-ticket-alt nav-icon"></i>
-                                <p>Tickets</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
+                    <li class="nav-item has-treeview">
+                        <a href="#" class="nav-link menu-open">
+                            <i class="nav-icon fas fa-ticket-alt text-danger"></i>
+                            <p>
+                                Support Tickets
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="<?= base_url('admin/tickets/ticket-types') ?>" class="nav-link">
+                                    <i class="fas fa-money-bill-wave nav-icon"></i>
+                                    <p>Ticket Types</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?= base_url('admin/tickets') ?>" class="nav-link">
+                                    <i class="fas fa-ticket-alt nav-icon"></i>
+                                    <p>Tickets</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                 <?php } ?>
                 <?php if (has_permissions('read', 'promo_code')) { ?>
                     <li class="nav-item">
@@ -303,7 +303,7 @@
                         <ul class="nav nav-treeview">
                             <?php if (has_permissions('read', 'delivery_boy')) { ?>
                                 <li class="nav-item">
-                                    <a href="<?= base_url('admin/delivery-boys/manage-delivery-boy') ?>" class="nav-link text-sm">
+                                    <a href="<?= base_url('admin/delivery-boys/manage-delivery-boy') ?>" class="text-sm nav-link">
                                         <i class="fas fa-user-cog nav-icon "></i>
                                         <p> Manage Delivery Boys </p>
                                     </a>
@@ -398,21 +398,21 @@
                                     <p>Privacy Policy</p>
                                 </a>
                             </li>
-                            <li class="nav-item text-sm">
+                            <li class="text-sm nav-item">
                                 <a href="<?= base_url('admin/admin-privacy-policy') ?>" class="nav-link">
-                                    <i class="fa fa-exclamation-triangle nav-icon  "></i>
+                                    <i class="fa fa-exclamation-triangle nav-icon "></i>
                                     <p>Admin Policies</p>
                                 </a>
                             </li>
-                            <li class="nav-item text-sm">
+                            <li class="text-sm nav-item">
                                 <a href="<?= base_url('admin/delivery-boy-privacy-policy') ?>" class="nav-link">
-                                    <i class="fa fa-exclamation-triangle nav-icon  "></i>
+                                    <i class="fa fa-exclamation-triangle nav-icon "></i>
                                     <p>Delivery Boy Policies</p>
                                 </a>
                             </li>
-                            <li class="nav-item text-sm">
+                            <li class="text-sm nav-item">
                                 <a href="<?= base_url('admin/client-api-keys/') ?>" class="nav-link">
-                                    <i class="fa fa-key nav-icon  "></i>
+                                    <i class="fa fa-key nav-icon "></i>
                                     <p>Client Api Keys</p>
                                 </a>
                             </li>
@@ -422,12 +422,12 @@
                                     <p>System Updater</p>
                                 </a>
                             </li>
-							<li class="nav-item">
-								<a href="<?= base_url('admin/purchase-code') ?>" class="nav-link">
-									<i class="fas fa-check nav-icon"></i>
-									<p>System Registration</p>
-								</a>
-							</li>
+                            <li class="nav-item">
+                                <a href="<?= base_url('admin/purchase-code') ?>" class="nav-link">
+                                    <i class="fas fa-check nav-icon"></i>
+                                    <p>System Registration</p>
+                                </a>
+                            </li>
                         </ul>
                     </li>
 
@@ -536,7 +536,7 @@
                 if (!empty($userData)) {
                     if ($userData[0]['role'] == 0 || $userData[0]['role'] == 1) {
                     ?>
-                        <li class="nav-item mb-4">
+                        <li class="mb-4 nav-item">
                             <a href="<?= base_url('admin/system-users/') ?>" class="nav-link">
                                 <i class="nav-icon fas fa-user-tie text-danger"></i>
                                 <p class="text">System Users</p>

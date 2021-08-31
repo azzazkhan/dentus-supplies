@@ -9,18 +9,18 @@
             </div>
             <div class="modal-body">
                 <div class="col-md-12 main-content">
-                    <div class="content-area p-4">
+                    <div class="p-4 content-area">
                         <div class="card-innr">
                             <div class="gaps-1-5x"></div>
                             <input type='hidden' name='media_type' id='media_type' value='image'>
                             <input type='hidden' name='current_input'>
                             <input type='hidden' name='remove_state'>
                             <input type='hidden' name='multiple_images_allowed_state'>
-                            <div class="col-md-12 mt-3 mb-3 mb-5">
+                            <div class="mt-3 mb-3 mb-5 col-md-12">
                                 <!-- Change /upload-target to your upload address -->
                                 <div id="dropzone" class="dropzone"></div>
                                 <br>
-                                <a href="" id="upload-files-btn" class="btn btn-success float-right">Upload</a>
+                                <a href="" id="upload-files-btn" class="float-right btn btn-success">Upload</a>
                             </div>
                             <div class="alert alert-warning">Select media and click choose media</div>
                             <div id="toolbar">
@@ -48,7 +48,7 @@
         </div>
     </div>
 </div>
-<footer class="main-footer text-right">
+<footer class="text-right main-footer">
     <strong>Copyright &copy; 2020-2021 <a href="<?= base_url('admin/home') ?>"><?php $settings = get_settings('system_settings', true);
                                                                                 echo $settings['app_name']; ?></a>.</strong>
     All rights reserved.
@@ -57,7 +57,7 @@
 </footer>
 
 <?php if (ALLOW_MODIFICATION == 0) { ?>
-<div class="buy-now-btn">
-    <a href="https://codecanyon.net/item/eshop-flutter-ecommerce-full-app/29880351" target="_blank" class="btn btn-danger"> <i class="fa fa-shopping-cart"></i> Buy Now</a>
-</div>
+    <div class="buy-now-btn">
+        <a href="https://codecanyon.net/item/eshop-flutter-ecommerce-full-app/29880351" target="_blank" class="btn btn-danger"> <i class="fa fa-shopping-cart"></i> Buy Now</a>
+    </div>
 <?php } ?>

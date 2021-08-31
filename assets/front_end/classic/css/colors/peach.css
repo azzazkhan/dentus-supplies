@@ -20,7 +20,8 @@
 .toggle-input:disabled:checked+.toggle.switch, .toggle.switch.is-active.is-disabled,
 .toggle-input:checked+.toggle.checkbox, .toggle.checkbox.is-active,
 .toggle-input:disabled:checked+.toggle.checkbox, .toggle.checkbox.is-active.is-disabled {
-    background-color: #FF6A65 !important;
+    /* background-color: #FF6A65 !important; */
+    background-color: #159BFF !important;
 }
 
 
@@ -43,37 +44,46 @@ ul.sub-submenu li:hover,
 .header-icon:hover, .header-icon:focus,
 .sidebar #leftside-navigation ul li a:hover
 .link-color circle,.link-color polyline,.link-color path{
-    color: #FF6A65 !important;
-    stroke: #FF6A65 !important;
+    /* color: #FF6A65 !important; */
+    /* stroke: #FF6A65 !important; */
+    color: #159BFF !important;
+    stroke: #159BFF !important;
 }
 
 .progress-bar {
-    background-image: linear-gradient(to right top, #FF6A65, #FF6A65,#FF6A65,#FF6A65, #FF6A65) !important;
+    /* background-image: linear-gradient(to right top, #FF6A65, #FF6A65,#FF6A65,#FF6A65, #FF6A65) !important; */
+    background-image: linear-gradient(to right top, #159BFF, #159BFF,#159BFF,#159BFF, #159BFF) !important;
 }
 
 .subscribe-form button {
-    border: #FF6A65 !important;
+    /* border: #FF6A65 !important; */
+    border: #159BFF !important;
 }
 
 .footer-widget-heading h3::before,
 .swiper-pagination-bullet-active{
-    background: #FF6A65 !important;
+    /* background: #FF6A65 !important; */
+    background: #159BFF !important;
 }
 
 .style-3-product-right-lg .product-grid {
-    border: 1px solid #FF6A65 !important;
+    /* border: 1px solid #FF6A65 !important; */
+    border: 1px solid #159BFF !important;
 }
 
 .sidenav .nav-link.active{
-    box-shadow: 0 2px 0 #FF6A65 !important;
+    /* box-shadow: 0 2px 0 #FF6A65 !important; */
+    box-shadow: 0 2px 0 #159BFF !important;
 }
 
 .button-success,
 .button-success:hover, .button-success:focus, .button-success-outline:hover, .button-success-outline:focus{
-    border-color: #FF6A65 !important;
+    /* border-color: #FF6A65 !important; */
+    border-color: #159BFF !important;
 }
 
 .colored-breadcrumb,
 .page-footer {
-    background-color: #ff6a6533 !important;
+    /* background-color: #ff6a6533 !important; */
+    background-color: #159BFF33 !important;
 }

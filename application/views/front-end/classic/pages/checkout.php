@@ -17,14 +17,14 @@
     <div class="main-content">
         <form class="needs-validation" id="checkout_form" method="POST" action="<?= base_url('cart/place-order') ?>">
             <div class="row">
-                <div class="col-md-8 bg-white mt-5">
+                <div class="mt-5 bg-white col-md-8">
                     <h2 class="checkout-form-title"><?= !empty($this->lang->line('billing_details')) ? $this->lang->line('billing_details') : 'Billing Details' ?></h2>
                     <div class="ship-details-wrapper">
                         <div class="align-item-center ship-title-details justify-content-between user-add d-flex">
                             <h5 class="pb-3"><?= !empty($this->lang->line('shipping_address')) ? $this->lang->line('shipping_address') : 'Shipping Address' ?></h5>
                             <a href="#" data-izimodal-open=".address-modal"><i class="fas fa-edit edit-icon"></i></a>
                         </div>
-                        <div class="shipped-details mt-3">
+                        <div class="mt-3 shipped-details">
                             <p class="text-muted" id="address-name-type"><?= isset($default_address) && !empty($default_address) ? $default_address[0]['name'] . ' - ' . ucfirst($default_address[0]['type']) : '' ?></p>
                             <p class="text-muted" id="address-full"><?= isset($default_address) && !empty($default_address) ? $default_address[0]['area'] . ' , ' . $default_address[0]['city'] : '' ?></p>
                             <p class="text-muted" id="address-country"><?= isset($default_address) && !empty($default_address) ? $default_address[0]['state'] . ' , ' . $default_address[0]['country'] . ' - ' . $default_address[0]['pincode'] : '' ?></p>
@@ -75,8 +75,8 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="far fa-clock"></i></span>
                             </div>
-                            <input type="text" class="form-control float-right" id="datepicker">
-                            <input type="hidden" id="start_date" class="form-control float-right">
+                            <input type="text" class="float-right form-control" id="datepicker">
+                            <input type="hidden" id="start_date" class="float-right form-control">
                         </div>
                         <div class="mt-3" id="time_slots">
                             <?php foreach ($time_slots as $row) { ?>
@@ -90,7 +90,7 @@
                         </div>
                     <?php } ?>
                     <hr>
-                    <input type="hidden" name="delivery_date" id="delivery_date" class="form-control float-right">
+                    <input type="hidden" name="delivery_date" id="delivery_date" class="float-right form-control">
                     <div class="align-item-center ship-title-details justify-content-between d-flex">
                         <h5><?= !empty($this->lang->line('wallet_balance')) ? $this->lang->line('wallet_balance') : 'Use wallet balance' ?></h5>
                     </div>
@@ -102,11 +102,11 @@
                         </label>
                     </div>
 
-                    <div class="ship-details-wrapper mt-3 payment-methods">
+                    <div class="mt-3 ship-details-wrapper payment-methods">
                         <div class="align-item-center ship-title-details justify-content-between d-flex">
                             <h5><?= !empty($this->lang->line('payment_method')) ? $this->lang->line('payment_method') : 'Payment Method' ?></h5>
                         </div>
-                        <div class="shipped-details mt-3 col-md-6">
+                        <div class="mt-3 shipped-details col-md-6">
                             <table class="table table-step-shipping">
                                 <tbody>
                                     <?php if (isset($payment_methods['cod_method']) && $payment_methods['cod_method'] == 1) { ?>
@@ -291,7 +291,7 @@
                             <!--Stripe.js injects the Card Element-->
                         </div>
                         <p id="card-error" role="alert"></p>
-                        <p class="result-message hidden"></p>
+                        <p class="hidden result-message"></p>
                     </div>
                     <div id="bank_transfer_slide">
                         <div id="account_data" style="display: none;">
@@ -342,7 +342,7 @@
                     <input type="hidden" name="flutterwave_transaction_ref" id="flutterwave_transaction_ref" value="" />
                     <input type="hidden" name="promo_set" id="promo_set" value="" />
                 </div>
-                <div class="col-md-4 mt-5">
+                <div class="mt-5 col-md-4">
                     <div class="checkout-order-wrapper">
                         <div class="checkout-title">
                             <h1><?= !empty($this->lang->line('order_summary')) ? $this->lang->line('order_summary') : 'Order Summary' ?></h1>
@@ -355,7 +355,7 @@
                                     </h2>
                                 </div>
                                 <div>
-                                    <div class="product-checkout mt-4">
+                                    <div class="mt-4 product-checkout">
                                         <?php if (isset($cart) && !empty($cart)) {
                                             $product_not_delivarable = array_column($product_not_delivarable, "product_id");
 
@@ -371,7 +371,7 @@
                                                                 </a>
                                                             </div>
                                                             <!-- checking product deliverable or not  -->
-                                                            <span class="product-info text-left">
+                                                            <span class="text-left product-info">
                                                                 <a href="<?= base_url("products/details/" . $row['slug']) ?>" class="product-title text-muted"><?= $row['name'] ?></a>
                                                                 <div id="p_<?= $row['product_id'] ?>" class="text-danger deliverable_status"><?= (isset($default_address) && !empty($default_address) && in_array($row['product_id'], $product_not_delivarable)) ? "Not deliverable" : "" ?></div>
                                                                 <?php if (!empty($row['product_variants'])) { ?>
@@ -442,13 +442,13 @@
                                         <button class="button button-danger d-none" id="clear_promo_btn"><?= !empty($this->lang->line('clear')) ? $this->lang->line('clear') : 'Clear' ?></button>
                                     </div>
                                 </div>
-                                <?php  $is_disabled = false;
+                                <?php $is_disabled = false;
                                 foreach ($product_not_delivarable as $p_id) {
                                     if (!empty($p_id['product_id'])) {
                                         $is_disabled = true;
                                         continue;
                                     }
-                                }?>
+                                } ?>
                                 <button class="block" id="place_order_btn" type="submit" <?= ($is_disabled) ? "disabled" : ""; ?>><?= !empty($this->lang->line('place_order')) ? $this->lang->line('place_order') : 'Place Order' ?></button>
                             </div>
                         </div>
@@ -473,7 +473,7 @@
     <section id="address_form">
         <div class="h4"><?= !empty($this->lang->line('shipping_address')) ? $this->lang->line('shipping_address') : 'Shipping Address' ?></div>
         <ul id="address-list"></ul>
-        <div class="col-12 text-right mt-2">
+        <div class="mt-2 text-right col-12">
             <a target="_blank" href="<?= base_url('my-account/manage-address') ?>"><?= !empty($this->lang->line('create_a_new_address')) ? $this->lang->line('create_a_new_address') : 'Create a New Address' ?></a>
         </div>
         <footer class="mt-4">

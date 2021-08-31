@@ -14175,7 +14175,8 @@ body.text-sm .control-sidebar {
 }
 
 .navbar-orange {
-    background-color: #fd7e14;
+    /* background-color: #fd7e14; */
+    background-color: #159BFF;
 }
 
 .navbar-yellow {

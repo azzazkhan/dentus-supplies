@@ -1,6 +1,6 @@
 <!-- IziModal -->
 
-<script src="<?= THEME_ASSETS_URL . 'js/eshop-bundle-js.js' ?>"></script>
+<script src="<?= THEME_ASSETS_URL . 'js/eshop-bundle-js.js?v=' . hash('crc32b', time()) ?>"></script>
 
 <!-- Firebase.js -->
 <script src="<?= THEME_ASSETS_URL . 'js/firebase-app.js' ?>"></script>

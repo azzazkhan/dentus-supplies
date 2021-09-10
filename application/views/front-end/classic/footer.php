@@ -111,7 +111,14 @@
             <div class="row">
                 <div class="col-xl-6 col-lg-6 text-center text-lg-left">
                     <div class="copyright-text">
-                        <p>Copyright &copy; <?= date('Y') ?>, All Right Reserved <a target="_blank" href="https://www.wrteam.in/">WRTeam</a></p>
+                        <p>
+                            Copyright &copy;
+                            <?= date('Y') ?>,
+                            All Right Reserved
+                            <a target="_blank" href="https://www.wrteam.in/">
+                                Dentus Supplies
+                            </a>
+                        </p>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">

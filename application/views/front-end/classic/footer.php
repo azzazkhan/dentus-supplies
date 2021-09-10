@@ -115,7 +115,7 @@
                             Copyright &copy;
                             <?= date('Y') ?>,
                             All Right Reserved
-                            <a target="_blank" href="https://www.wrteam.in/">
+                            <a target="_blank" href="<?= base_url('/') ?>">
                                 Dentus Supplies
                             </a>
                         </p>

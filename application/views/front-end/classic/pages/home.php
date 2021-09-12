@@ -3,12 +3,12 @@
         <div class=''>
             <!-- Swiper -->
             <div class="swiper-container banner-swiper">
-                <div  class="swiper-wrapper">
+                <div class="swiper-wrapper">
                     <?php if (isset($sliders) && !empty($sliders)) { ?>
                         <?php foreach ($sliders as $row) { ?>
                             <div class="swiper-slide center-swiper-slide">
-                                <a href="<?= $row['link'] ?>">
-                                    <img src="<?= base_url($row['image']) ?>">
+                                <a href="<?= $row['link'] ?>" style="width: 100% !important; display: block;">
+                                    <img src="<?= base_url($row['image']) ?>" style="width: 100% !important; min-height: 250px; object-fit: cover;">
                                 </a>
                             </div>
                         <?php } ?>

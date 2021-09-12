@@ -8,7 +8,7 @@
                         <?php foreach ($sliders as $row) { ?>
                             <div class="swiper-slide center-swiper-slide">
                                 <a href="<?= $row['link'] ?>" style="width: 100% !important; display: block;">
-                                    <img src="<?= base_url($row['image']) ?>" style="width: 100% !important; min-height: 250px; object-fit: cover;">
+                                    <img src="<?= base_url($row['image']) ?>" style="width: 100% !important; height: 250px; object-fit: cover;">
                                 </a>
                             </div>
                         <?php } ?>

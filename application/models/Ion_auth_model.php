@@ -2047,6 +2047,8 @@ class Ion_auth_model extends CI_Model
 						  ->limit(1)
 						  ->get($this->tables['login_users'])->row();
 
+		$query = !is_string($query) && !is_array($string) && !($query instanceof Countable) ? [] : $query;
+
 		// Check that we got the user
 		if (count($query) === 1)
 		{

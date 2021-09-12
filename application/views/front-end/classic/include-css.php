@@ -5,16 +5,16 @@
 
 $path = ($is_rtl == 1) ? 'rtl/' : "";
 ?>
-<link rel="stylesheet" href="<?= THEME_ASSETS_URL . 'css/eshop-bundle.css' ?>" />
-<link rel="stylesheet" href="<?= THEME_ASSETS_URL . 'css/' . $path . 'eshop-bundle-main.css' ?>">
-<link rel="icon" href="<?=base_url($favicon)?>" type="image/gif" sizes="16x16">
+<link rel="stylesheet" href="<?= THEME_ASSETS_URL . 'css/eshop-bundle.css?v=' . hash('crc32b', time()) ?>" />
+<link rel="stylesheet" href="<?= THEME_ASSETS_URL . 'css/' . $path . 'eshop-bundle-main.css?v=' . hash('crc32b', time()) ?>">
+<link rel="icon" href="<?= base_url($favicon) ?>" type="image/gif" sizes="16x16">
 
 <!-- Color CSS -->
-<link rel="stylesheet" href="<?=THEME_ASSETS_URL.'css/colors/peach.css'?>" id="color-switcher">
+<link rel="stylesheet" href="<?= THEME_ASSETS_URL . 'css/colors/blue.css?v=' . hash('crc32b', time()) ?>" id="color-switcher">
 
 <!-- Jquery -->
 <script src="<?= THEME_ASSETS_URL . 'js/jquery.min.js' ?>"></script>
-<script src="<?= THEME_ASSETS_URL . 'js/eshop-bundle-top-js.js' ?>"></script>
+<script src="<?= THEME_ASSETS_URL . 'js/eshop-bundle-top-js.js?v=' . hash('crc32b', time()) ?>"></script>
 <script type="text/javascript">
     base_url = "<?= base_url() ?>";
     currency = "<?= $settings['currency'] ?>";

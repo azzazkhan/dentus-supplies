@@ -75,7 +75,7 @@ class MyConfig
     function get_current_theme()
     {
         $t = &get_instance();
-        $t->config->load('eshop');
+        $t->config->load('dentus_supplies');
         $theme = '';
         $default_theme = $t->config->item('default_theme');
         $current_theme = current_theme();

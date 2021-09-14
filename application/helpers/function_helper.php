@@ -1804,7 +1804,7 @@ function has_permissions($role, $module)
     }
     $t = &get_instance();
     $id = $t->session->userdata('user_id');
-    $t->load->config('eshop');
+    $t->load->config('dentus_supplies');
     $general_system_permissions  = $t->config->item('system_modules');
     $userData = get_user_permissions($id);
     if (!empty($userData)) {
@@ -2121,7 +2121,7 @@ function fetch_orders($order_id = NULL, $user_id = NULL, $status = NULL, $delive
 function find_media_type($extenstion)
 {
     $t = &get_instance();
-    $t->config->load('eshop');
+    $t->config->load('dentus_supplies');
     $type = $t->config->item('type');
     foreach ($type as $main_type => $extenstions) {
         foreach ($extenstions['types'] as $k => $v) {
@@ -2237,7 +2237,7 @@ function escape_array($array)
 function allowed_media_types()
 {
     $t = &get_instance();
-    $t->config->load('eshop');
+    $t->config->load('dentus_supplies');
     $type = $t->config->item('type');
     $general = [];
     foreach ($type as $main_type => $extenstions) {
@@ -2621,7 +2621,7 @@ function verify_payment_transaction($txn_id, $payment_method, $additional_data =
     }
 
     $CI = &get_instance();
-    $CI->config->load('eshop');
+    $CI->config->load('dentus_supplies');
     $supported_methods = $CI->config->item('supported_payment_methods');
 
     if (empty(trim($payment_method)) || !in_array($payment_method, $supported_methods)) {

@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h4>eShop Purchase Code Validator</h4>
+                    <h4>Dentus Supplies Purchase Code Validator</h4>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -24,7 +24,7 @@
                         <form class="form-horizontal form-submit-event" action="<?= base_url('admin/purchase-code/validator'); ?>" method="POST" enctype="multipart/form-data">
                             <div class="card-body">
                                 <div class="form-group row">
-                                    <label for="purchase_code" class="col-sm-2 col-form-label">eShop Purchase Code<span class='text-danger text-sm'>*</span></label>
+                                    <label for="purchase_code" class="col-sm-2 col-form-label">Dentus Supplies Purchase Code<span class='text-danger text-sm'>*</span></label>
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control" id="purchase_code" placeholder="Enter your purchase code here" name="purchase_code" value="">
                                     </div>

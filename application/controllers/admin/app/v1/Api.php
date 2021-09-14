@@ -68,9 +68,9 @@ Defined Methods:-
     {
         $payload = [
             'iat' => time(), /* issued at time */
-            'iss' => 'eshop',
+            'iss' => 'dentus_supplies',
             'exp' => time() + (30 * 60), /* expires after 1 minute */
-            'sub' => 'eshop Authentication'
+            'sub' => 'Dentus Supplies Authentication'
         ];
         $token = $this->jwt->encode($payload, JWT_SECRET_KEY);
         print_r(json_encode($token));
@@ -103,7 +103,7 @@ Defined Methods:-
                 $message = '';
                 try {
                     $payload = $this->jwt->decode($token, $row['secret'], ['HS256']);
-                    if (isset($payload->iss) && $payload->iss == 'eshop') {
+                    if (isset($payload->iss) && $payload->iss == 'dentus_supplies') {
                         $error = false;
                         $flag = false;
                     } else {

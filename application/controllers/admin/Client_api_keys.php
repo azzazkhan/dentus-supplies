@@ -31,9 +31,9 @@ class Client_api_keys extends CI_Controller
 			if(!empty($client_api_keys) && isset($client_api_keys[0]['secret'])){
 				$payload = [
 					'iat' => time(), /* issued at time */
-					'iss' => 'eshop',
+					'iss' => 'dentus_supplies',
 					'exp' => time() + (30 * 60), /* expires after 1 minute */
-					// 'sub' => 'eshop Authentication'
+					// 'sub' => 'Dentus Supplies Authentication'
 				];
 				$token = $this->jwt->encode($payload, $client_api_keys[0]['secret']);
 			}

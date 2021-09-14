@@ -74,7 +74,7 @@ class Payment extends CI_Controller
                 return;
             }
             $settings = get_settings('system_settings', true);
-            $app_name = isset($settings['app_name']) && !empty($settings['app_name']) ? $settings['app_name'] : 'eShop - ecommerce';
+            $app_name = isset($settings['app_name']) && !empty($settings['app_name']) ? $settings['app_name'] : 'Dentus Supplies';
             $app_name = str_replace(" ", "", $settings['app_name']);
             $order_id = $app_name . "-" . time() . rand(1000, 9999);
             $credentials = $this->paytm->get_credentials();
@@ -192,7 +192,7 @@ class Payment extends CI_Controller
             $amount = $overall_amount;
             $user_id = $this->data['user']->id;
             $settings = get_settings('system_settings', true);
-            $app_name = isset($settings['app_name']) && !empty($settings['app_name']) ? $settings['app_name'] : 'eShop - ecommerce';
+            $app_name = isset($settings['app_name']) && !empty($settings['app_name']) ? $settings['app_name'] : 'Dentus Supplies';
             $app_name = str_replace(" ", "", $settings['app_name']);
             $order_id = $app_name . "-" . time() . rand(1000, 9999);
             $paytmParams = array();

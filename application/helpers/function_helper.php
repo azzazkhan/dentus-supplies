@@ -1804,7 +1804,7 @@ function has_permissions($role, $module)
     }
     $t = &get_instance();
     $id = $t->session->userdata('user_id');
-    $t->load->config('dentus_supplies');
+    $t->load->config('eshop');
     $general_system_permissions  = $t->config->item('system_modules');
     $userData = get_user_permissions($id);
     if (!empty($userData)) {

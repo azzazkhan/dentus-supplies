@@ -11,7 +11,7 @@ class System_users extends CI_Controller
 		$this->load->database();
 		$this->load->helper(['url', 'language', 'timezone_helper']);
 		$this->load->model('system_users_model');
-		$this->load->config('dentus_supplies');
+		$this->load->config('eshop');
 		$userData = get_user_permissions($this->session->userdata('user_id'));
 		if (empty($userData) || $userData[0]['role'] > 1) {
 			$this->session->set_flashdata('authorize_flag', PERMISSION_ERROR_MSG);

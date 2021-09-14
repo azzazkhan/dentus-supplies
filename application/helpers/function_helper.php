@@ -2121,7 +2121,7 @@ function fetch_orders($order_id = NULL, $user_id = NULL, $status = NULL, $delive
 function find_media_type($extenstion)
 {
     $t = &get_instance();
-    $t->config->load('dentus_supplies');
+    $t->config->load('eshop');
     $type = $t->config->item('type');
     foreach ($type as $main_type => $extenstions) {
         foreach ($extenstions['types'] as $k => $v) {
@@ -2237,7 +2237,7 @@ function escape_array($array)
 function allowed_media_types()
 {
     $t = &get_instance();
-    $t->config->load('dentus_supplies');
+    $t->config->load('eshop');
     $type = $t->config->item('type');
     $general = [];
     foreach ($type as $main_type => $extenstions) {
@@ -2621,7 +2621,7 @@ function verify_payment_transaction($txn_id, $payment_method, $additional_data =
     }
 
     $CI = &get_instance();
-    $CI->config->load('dentus_supplies');
+    $CI->config->load('eshop');
     $supported_methods = $CI->config->item('supported_payment_methods');
 
     if (empty(trim($payment_method)) || !in_array($payment_method, $supported_methods)) {

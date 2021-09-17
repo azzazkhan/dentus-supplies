@@ -356,7 +356,8 @@ class Product_model extends CI_Model
             $search_res->group_End();
         }
 
-        $pro_search_res = $search_res->group_by('pid')->order_by($sort, "DESC")->limit($limit, $offset)->get('products p')->result_array();
+        // $pro_search_res = $search_res->group_by('pid')->order_by($sort, "DESC")->limit($limit, $offset)->get('products p')->result_array();
+        $pro_search_res = $search_res->order_by($sort, "DESC")->limit($limit, $offset)->get('products p')->result_array();
         // print_r($this->db->last_query());
         $currency = get_settings('currency');
         $bulkData = array();

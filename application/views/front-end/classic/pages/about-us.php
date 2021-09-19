@@ -15,7 +15,9 @@
     </div>
     <div class="text-justify">
         <div class="hrDiv">
-            <?= $about_us ?>
+            <?php
+            var_dump($about_us);
+            ?>
         </div>
     </div>
 </section>

@@ -58,7 +58,7 @@
                                 <a href="<?= $web_settings['facebook_link'] ?>" target="_blank"><i class="fab fa-facebook-f rounded-icon clr-facebbok"></i></a>
                             <?php } ?>
                             <?php if (isset($web_settings['twitter_link']) && !empty($web_settings['twitter_link'])) { ?>
-                                <a href="<?= $web_settings['twitter_link'] ?>" target="_blank"><i class="fab fa-twitter rounded-icon clr-twitter"></i></a>
+                                <a href="<?= $web_settings['twitter_link'] ?>" target="_blank"><i class="fab fa-linkedin-in rounded-icon clr-twitter"></i></a>
                             <?php } ?>
                             <?php if (isset($web_settings['instagram_link']) &&  !empty($web_settings['instagram_link'])) { ?>
                                 <a href="<?= $web_settings['instagram_link'] ?>" target="_blank"><i class="fab fa-instagram rounded-icon clr-insta"></i></a>
@@ -383,9 +383,9 @@
 </div>
 
 <?php if (ALLOW_MODIFICATION == 0) { ?>
-<div class="buy-now-btn">
-    <a href="https://codecanyon.net/item/eshop-multipurpose-ecommercestore-website/31071809" target="_blank" class="btn btn-danger"> <i class="fa fa-shopping-cart"></i> Buy Now</a>
-</div>
+    <div class="buy-now-btn">
+        <a href="https://codecanyon.net/item/eshop-multipurpose-ecommercestore-website/31071809" target="_blank" class="btn btn-danger"> <i class="fa fa-shopping-cart"></i> Buy Now</a>
+    </div>
 <?php } ?>
 
 <!-- end -->

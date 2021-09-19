@@ -149,7 +149,7 @@
                 if ($count_key != 0) {
                     if (!empty($offers) && !empty($offers[$count_key - 1])) { ?>
                         <a href="<?= $offers[$count_key - 1]['link'] ?>">
-                            <img class="img-fluid lazy" data-src="<?= base_url($offers[$count_key - 1]['image']) ?>">
+                            <img class="img-fluid lazy" style="width: 100% !important; height: 350px; object-fit: cover;" data-src="<?= base_url($offers[$count_key - 1]['image']) ?>">
                         </a>
                 <?php }
                 }
@@ -286,7 +286,7 @@
                 if ($count_key != 0) {
                     if (!empty($offers) && !empty($offers[$count_key - 1])) { ?>
                         <a href="<?= $offers[$count_key - 1]['link'] ?>">
-                            <img class="img-fluid lazy" data-src="<?= base_url($offers[$count_key - 1]['image']) ?>">
+                            <img class="img-fluid lazy" style="width: 100% !important; height: 350px; object-fit: cover;" data-src="<?= base_url($offers[$count_key - 1]['image']) ?>">
                         </a>
                 <?php }
                 }
@@ -425,7 +425,7 @@
                 if ($count_key != 0) {
                     if (!empty($offers) && !empty($offers[$count_key - 1])) { ?>
                         <a href="<?= $offers[$count_key - 1]['link'] ?>">
-                            <img class="img-fluid lazy" data-src="<?= base_url($offers[$count_key - 1]['image']) ?>">
+                            <img class="img-fluid lazy" style="width: 100% !important; height: 350px; object-fit: cover;" data-src="<?= base_url($offers[$count_key - 1]['image']) ?>">
                         </a>
                 <?php }
                 }
@@ -510,7 +510,7 @@
                 if ($count_key != 0) {
                     if (!empty($offers) && !empty($offers[$count_key - 1])) { ?>
                         <a href="<?= $offers[$count_key - 1]['link'] ?>">
-                            <img class="img-fluid lazy" data-src="<?= base_url($offers[$count_key - 1]['image']) ?>">
+                            <img class="img-fluid lazy" style="width: 100% !important; height: 350px; object-fit: cover;" data-src="<?= base_url($offers[$count_key - 1]['image']) ?>">
                         </a>
                 <?php }
                 }

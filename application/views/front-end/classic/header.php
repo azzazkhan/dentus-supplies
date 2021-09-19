@@ -4,7 +4,7 @@
     $language = get_languages();
     $cookie_lang = $this->input->cookie('language', TRUE);
     $web_settings = get_settings('web_settings', true);
-    var_dump($this->lang["is_loaded"])
+    var_dump($this->lang->is_loaded)
     ?>
  <!-- header starts -->
  <div id="mySidenav" class="sidenav is-closed-left">

@@ -666,7 +666,7 @@ $custom_steps = [
                                         </div>
                                     </div>
                                 </div>
-                                <div class="info-box-content" style="flex: 1; display: flex; justify-content: center; align-items: center;">
+                                <div class="info-box-content" style="flex: 1; display: flex; justify-content: center; align-items: center; margin-left: 5px;">
                                     <h4 class="info-box-title" style="margin: 0;"><?=
                                                                                     $this->lang->is_loaded["web_labels_lang.php"] == 'spanish' ?
                                                                                         $step['es'] : $step['en'];

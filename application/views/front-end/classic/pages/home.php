@@ -652,7 +652,7 @@ $custom_steps = [
 ];
 ?>
 <section class="freedel-sec">
-    <div class="row row-fluid dark-footer-margin">
+    <div class="row row-fluid dark-footer-margin" style="margin: 0 !important;">
         <?php foreach ($custom_steps as $step) : ?>
             <div class="col text-left text-md-center">
                 <div class="column_inner custom_column">
@@ -667,13 +667,10 @@ $custom_steps = [
                                     </div>
                                 </div>
                                 <div class="info-box-content">
-                                    <h4 class="info-box-title"><?=
-                                                                $this->lang->is_loaded["web_labels_lang.php"] == 'spanish' ?
-                                                                    $step['es'] : $step['en'];
-                                                                ?></h4>
-                                    <!-- <div class="info-box-inner">
-                                        <p></p>
-                                    </div> -->
+                                    <h4 class="info-box-title" style="margin: 0; flex: 1; display: flex; justify-content: center; align-items: center;"><?=
+                                                                                                                                                        $this->lang->is_loaded["web_labels_lang.php"] == 'spanish' ?
+                                                                                                                                                            $step['es'] : $step['en'];
+                                                                                                                                                        ?></h4>
                                     </h4>
                                 </div>
                             </div>

@@ -3366,18 +3366,22 @@ $(document).on('change', '#media-type', function () {
 Dropzone.autoDiscover = false;
 
 if (document.getElementById('dropzone')) {
-
+/**
+ * CHANGELOG: Update maxing parallel uploads and timeout
+ * 
+ * Cusotm changes
+ */
     var myDropzone = new Dropzone("#dropzone", {
         url: base_url + 'admin/media/upload',
         paramName: "documents",
         autoProcessQueue: false,
-        parallelUploads: 12,
-        maxFiles: 12,
+        parallelUploads: 50,
+        maxFiles: 50,
         autoDiscover: false,
         addRemoveLinks: true,
-        timeout: 180000,
+        timeout: 600000,
         dictRemoveFile: 'x',
-        dictMaxFilesExceeded: 'Only 12 files can be uploaded at a time ',
+        dictMaxFilesExceeded: 'Only 50 files can be uploaded at a time ',
         dictResponseError: 'Error',
         uploadMultiple: true,
         dictDefaultMessage: '<p><input type="submit" value="Select Files" class="btn btn-success" /><br> or <br> Drag & Drop Media Files Here</p>',

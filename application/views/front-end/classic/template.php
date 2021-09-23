@@ -113,7 +113,7 @@
             z-index: 999999;
             min-width: 200px;
             min-height: max-content;
-            max-height: 100%;
+            /* max-height: 100%; */
             padding: 10px 15px;
             border: 1px solid #eaebef;
             border-radius: 6px;

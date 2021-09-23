@@ -319,15 +319,9 @@
                                          </li>
                                          <li class="morph-text">
                                              <a href="<?= base_url('about-us') ?>">
-                                                 <?php
-                                                    if ($this->lang->is_loaded["web_labels_lang.php"] == "spanish") :
-                                                        echo "¿Cómo funciona?";
-                                                    else :
-                                                        echo "How does it works?";
-                                                    endif;
-                                                    ?>
                                                  <?=
-                                                    !empty($this->lang->line('home')) ? $this->lang->line('home') : 'Home' ?>
+                                                    $this->lang->is_loaded["web_labels_lang.php"] == "spanish" ? "¿Cómo funciona?" : "How does it works?";
+                                                    ?>
                                              </a>
                                          </li>
                                          <li class="morph-text">

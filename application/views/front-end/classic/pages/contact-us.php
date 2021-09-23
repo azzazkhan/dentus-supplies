@@ -88,7 +88,7 @@
                             <a href="#"><i class="far fa-envelope-open"></i></a>
                         </div>
                         <div class="info-content">
-                            <h3><?= !empty($this->lang->line('email_us')) ? $this->lang->line('email_us') : 'Email Us' ?>
+                            <h3><?= !empty($this->lang->line('mail_us')) ? $this->lang->line('mail_us') : 'Email Us' ?>
                                 <span class="subtitle"><?= $web_settings['support_email'] ?></span>
                             </h3>
                         </div>

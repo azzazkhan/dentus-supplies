@@ -84,7 +84,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 15px 0
+            padding: 5px 0
         }
 
         .steps-wrapper .step .icon-wrapper img {
@@ -98,24 +98,27 @@
             line-height: 1.36em;
             flex: 1;
             justify-content: flex-start;
-            margin-left: 10px
+            margin-left: 5px
         }
 
         .steps-wrapper .step .content-wrapper .overlay {
-            color: #000;
-            padding: 10px 15px;
-            background-color: #fff;
             position: absolute;
-            visibility: hidden;
-            opacity: 0;
-            min-width: 200px;
+            color: #000;
+            background-color: #fff;
             font-size: 14px;
             top: calc(100% - 10px);
             left: 50%;
-            transform: translateX(-50%);
-            border-radius: 6px;
+            visibility: hidden;
+            opacity: 0;
+            z-index: 999999;
+            min-width: 200px;
+            min-height: max-content;
+            max-height: 100%;
+            padding: 10px 15px;
             border: 1px solid #eaebef;
+            border-radius: 6px;
             box-shadow: 0 2px 15px -4px rgba(0, 0, 0, .4);
+            transform: translateX(-50%);
             transition: opacity .2s ease, top .2s ease
         }
 

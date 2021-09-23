@@ -1,7 +1,16 @@
 <!-- breadcrumb -->
 <section class="breadcrumb-title-bar colored-breadcrumb">
     <div class="main-content responsive-breadcrumb">
-        <h1><?= isset($page_main_bread_crumb) ? $page_main_bread_crumb : ($this->lang->is_loaded["web_labels_lang.php"] == 'spanish' ? 'LISTA DE PRODUCTOS' : 'Product Listing') ?></h1>
+        <h1>
+            <?php
+            $output = 'Product Listing';
+            if (isset($page_main_bread_crumb))
+                $output = $page_main_bread_crumb;
+            elseif ($this->lang->is_loaded["web_labels_lang.php"] == 'spanish')
+                $output = 'LISTA DE PRODUCTOS';
+            print($output);
+            ?>
+        </h1>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?= base_url() ?>"><?= !empty($this->lang->line('home')) ? $this->lang->line('home') : 'Home' ?></a></li>

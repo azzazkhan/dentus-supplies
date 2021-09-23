@@ -3677,10 +3677,10 @@ background-color: #494;
 
     .cd-morph-dropdown .main-nav>ul>li>a {
         display: block;
-        padding: 0 1.8em;
+        padding: 0 0.5em;
         line-height: 33px;
         color: #fff;
-        font-size: 1.0rem;
+        font-size: 0.9rem;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         -webkit-transition: opacity .2s;

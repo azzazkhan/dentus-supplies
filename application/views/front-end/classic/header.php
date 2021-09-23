@@ -318,7 +318,7 @@
                                              <a href="<?= base_url() ?>"><?= !empty($this->lang->line('home')) ? $this->lang->line('home') : 'Home' ?></a>
                                          </li>
                                          <li class="morph-text">
-                                             <a href="<?= base_url('about-us') ?>">
+                                             <a href="<?= base_url('home/about-us') ?>">
                                                  <?=
                                                     $this->lang->is_loaded["web_labels_lang.php"] == "spanish" ? "¿Cómo funciona?" : "How does it works?";
                                                     ?>

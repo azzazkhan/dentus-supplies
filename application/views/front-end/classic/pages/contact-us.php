@@ -18,11 +18,12 @@
                         echo html_entity_decode(stripcslashes($web_settings['map_iframe']));
                     } */ ?>
                 </div> -->
-                <p>
+                <br /><br />
+                <p style="font-size: 18; font-weight: 600;">
                     We are located within the “Grand Hotel Tijuana Medical Plaza.
                 </p>
                 <br /><br />
-                <p>
+                <p style="font-size: 18; font-weight: 600;">
                     Parking lot: At the “Grand Hotel Tijuana Medical Plaza” there is parking located inside the Hotel, for your convenience.
                 </p>
             </div>
@@ -74,7 +75,7 @@
                         <div class="info-content">
                             <h3><?= !empty($this->lang->line('contact_us')) ? $this->lang->line('contact_us') : 'Contact Us' ?>
                                 <!-- <span class="subtitle"><?= $web_settings['support_number'] ?></span> -->
-                                <a href="tel:00526643176867">+52 (664) 317 - 6867</a>
+                                <a href="tel:00526643176867" class="subtitle">+52 (664) 317 - 6867</a>
                             </h3>
                         </div>
                     </div>

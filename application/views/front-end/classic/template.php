@@ -143,6 +143,62 @@
             opacity: 1;
             top: calc(100% - 7px)
         }
+
+        .about-content {
+            width: 85%;
+            margin: 0 auto
+        }
+
+        .about-content div {
+            margin-bottom: 30px
+        }
+
+        .about-content div h1 {
+            font-weight: 600;
+            font-size: 32px;
+            margin-bottom: 10px
+        }
+
+        .about-content div p,
+        .about-content div li {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.35em
+        }
+
+        .about-content div ul,
+        .about-content div ul li {
+            margin: 0;
+            padding: 0;
+            list-style: none
+        }
+
+        .about-content div ul li {
+            margin-bottom: 15px
+        }
+
+        .about-content div ul li strong {
+            position: relative
+        }
+
+        .about-content div ul li strong::before {
+            content: "";
+            position: absolute;
+            background-image: url("/uploads/media/2021/icon.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            top: calc(50% + 2px);
+            left: -15px;
+            display: block;
+            height: 25px;
+            width: 25px;
+            transform: translate(-100%, -50%)
+        }
+
+        .about-content div ul li strong::after {
+            content: ":"
+        }
     </style>
 </head>
 

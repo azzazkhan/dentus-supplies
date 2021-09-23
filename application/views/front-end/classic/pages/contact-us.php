@@ -13,15 +13,22 @@
     <div class="main-content">
         <div class="row">
             <div class="col-md-7">
-                <div class="sign-up-image">
-                    <?php if (isset($web_settings['map_iframe']) && !empty($web_settings['map_iframe'])) { 
+                <!-- <div class="sign-up-image">
+                    <?php /* if (isset($web_settings['map_iframe']) && !empty($web_settings['map_iframe'])) { 
                         echo html_entity_decode(stripcslashes($web_settings['map_iframe']));
-                    } ?>
-                </div>
+                    } */ ?>
+                </div> -->
+                <p>
+                    We are located within the “Grand Hotel Tijuana Medical Plaza.
+                </p>
+                <br /><br />
+                <p>
+                    Parking lot: At the “Grand Hotel Tijuana Medical Plaza” there is parking located inside the Hotel, for your convenience.
+                </p>
             </div>
             <div class="col-md-5 login-form">
                 <h2 class="form-text-style"><?= !empty($this->lang->line('contact_us')) ? $this->lang->line('contact_us') : 'Contact Us' ?></h2>
-                <form id="contact-us-form" action="<?=base_url('home/send-contact-us-email')?>" method="POST">
+                <form id="contact-us-form" action="<?= base_url('home/send-contact-us-email') ?>" method="POST">
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputEmail4"><?= !empty($this->lang->line('username')) ? $this->lang->line('username') : 'Username' ?></label>
@@ -53,7 +60,7 @@
                         </div>
                         <div class="info-content">
                             <h3><?= !empty($this->lang->line('find_us')) ? $this->lang->line('find_us') : 'Find us' ?></h3>
-                            <span class="subtitle"><?= output_escaping(str_replace('\r\n','</br>',$web_settings['address'])) ?></span>
+                            <span class="subtitle"><?= output_escaping(str_replace('\r\n', '</br>', $web_settings['address'])) ?></span>
                         </div>
                     </div>
                 </div>
@@ -66,7 +73,8 @@
                         </div>
                         <div class="info-content">
                             <h3><?= !empty($this->lang->line('contact_us')) ? $this->lang->line('contact_us') : 'Contact Us' ?>
-                                <span class="subtitle"><?= $web_settings['support_number'] ?></span>
+                                <!-- <span class="subtitle"><?= $web_settings['support_number'] ?></span> -->
+                                <a href="tel:00526643176867">+52 (664) 317 - 6867</a>
                             </h3>
                         </div>
                     </div>

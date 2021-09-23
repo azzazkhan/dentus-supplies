@@ -318,6 +318,19 @@
                                              <a href="<?= base_url() ?>"><?= !empty($this->lang->line('home')) ? $this->lang->line('home') : 'Home' ?></a>
                                          </li>
                                          <li class="morph-text">
+                                             <a href="<?= base_url('about-us') ?>">
+                                                 <?php
+                                                    if ($this->lang->is_loaded["web_labels_lang.php"] == "spanish") :
+                                                        echo "¿Cómo funciona?";
+                                                    else :
+                                                        echo "How does it works?";
+                                                    endif;
+                                                    ?>
+                                                 <?=
+                                                    !empty($this->lang->line('home')) ? $this->lang->line('home') : 'Home' ?>
+                                             </a>
+                                         </li>
+                                         <li class="morph-text">
                                              <a href="<?= base_url('products') ?>"><?= !empty($this->lang->line('products')) ? $this->lang->line('products') : 'Products' ?></a>
                                          </li>
                                          <li class="morph-text">

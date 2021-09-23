@@ -4,9 +4,11 @@
         <h1>
             <?php
             $output = 'Product Listing';
-            if (isset($page_main_bread_crumb))
-                $output = $page_main_bread_crumb;
-            elseif ($this->lang->is_loaded["web_labels_lang.php"] == 'spanish')
+            // if (isset($page_main_bread_crumb))
+            //     $output = $page_main_bread_crumb;
+            // elseif ($this->lang->is_loaded["web_labels_lang.php"] == 'spanish')
+            //     $output = 'LISTA DE PRODUCTOS';
+            if ($this->lang->is_loaded["web_labels_lang.php"] == 'spanish')
                 $output = 'LISTA DE PRODUCTOS';
             print($output);
             ?>

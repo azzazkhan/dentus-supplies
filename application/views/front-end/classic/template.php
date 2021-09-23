@@ -178,7 +178,8 @@
         }
 
         .about-content div ul li strong {
-            position: relative
+            position: relative;
+            font-weight: bold !important;
         }
 
         .about-content div ul li strong::before {

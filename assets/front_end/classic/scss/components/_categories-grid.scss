@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr)); // 1 Column
   column-gap: 5px;
-  padding: 10px;
+  padding: 10px 10px 25px;
   @include breakpoint(sm) {
     grid-template-columns: repeat(2, minmax(0, 1fr)); // 1 Column
     row-gap: 10px;
@@ -24,5 +24,36 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
+  }
+}
+
+.sub-categories-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 10px 10px 20px;
+  @include breakpoint(sm) {
+    margin: 0 -10px 0;
+  }
+  @include breakpoint(md) {
+    padding: 15px 15px 25px;
+  }
+  .sub-category-item {
+    flex-basis: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    @include breakpoint(sm) {
+      margin: 0 10px;
+      flex-basis: calc(50% - 20px);
+    }
+    @include breakpoint(md) {
+      flex-basis: calc(33.333334% - 20px);
+    }
+    @include breakpoint(lg) {
+      flex-basis: calc(25% - 20px);
+    }
   }
 }

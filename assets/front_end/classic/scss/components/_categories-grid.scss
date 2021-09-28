@@ -2,14 +2,15 @@
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr)); // 1 Column
   column-gap: 5px;
+  row-gap: 10px;
   padding: 10px 10px 25px;
   @include breakpoint(sm) {
     grid-template-columns: repeat(2, minmax(0, 1fr)); // 1 Column
-    row-gap: 10px;
+    row-gap: 20px;
   }
   @include breakpoint(md) {
     grid-template-columns: repeat(3, minmax(0, 1fr)); // 1 Column
-    row-gap: 15px;
+    row-gap: 25px;
   }
   @include breakpoint(lg) {
     grid-template-columns: repeat(4, minmax(0, 1fr)); // 1 Column
@@ -18,6 +19,9 @@
   @include breakpoint(xl) {
     grid-template-columns: repeat(5, minmax(0, 1fr)); // 1 Column
     row-gap: 15px;
+  }
+  @include breakpoint(xxl) {
+    row-gap: 25px;
   }
   .category-item {
     max-width: 100%;

@@ -210,12 +210,12 @@
     <?php $this->load->view('front-end/' . THEME . '/footer'); ?>
     <?php $this->load->view('front-end/' . THEME . '/include-script'); ?>
     <script type="text/javascript">
-        function scrollToSteps(event) {
-            event.preventDefault()
-            document.querySelector("#customStepsWrapper").scrollIntoView({
-                behavior: "smooth"
-            })
-        }
+        $("#scrollToSteps").click(function(e) {
+            e.preventDefault()
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("#customStepsWrapper").offset().top
+            }, 2000);
+        });
     </script>
 </body>
 

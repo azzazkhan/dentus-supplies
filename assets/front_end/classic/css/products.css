@@ -360,7 +360,7 @@
 }
 
 .product-style-1 .product-image-container {
-    max-width: 100px;
+    /* max-width: 100px; */
     height: 125px;
     margin: auto;
     position: relative;

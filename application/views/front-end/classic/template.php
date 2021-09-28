@@ -27,8 +27,8 @@
     $data['is_rtl'] = $is_rtl;
     ?>
     <?php $this->load->view('front-end/' . THEME . '/include-css', $data); ?>
-    <!-- Custom styles -->
-    <style>
+    <!-- Steps wrapper + About Page -->
+    <style type="text/css">
         .steps-wrapper {
             background-color: #159bff;
             color: #fff;
@@ -200,6 +200,8 @@
             content: ":"
         }
     </style>
+    <!-- Categories grid (all categories page) -->
+    <link rel="stylesheet" href="<?= THEME_ASSETS_URL . 'css/custom.css?v=' . hash('crc32b', time()) ?>" />
 </head>
 
 <body id="body" data-is-rtl='<?= $is_rtl ?>'>

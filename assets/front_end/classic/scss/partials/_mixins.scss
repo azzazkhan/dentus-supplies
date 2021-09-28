@@ -1,0 +1,66 @@
+// Breakpoints
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+@mixin breakpoint($size: lg) {
+  @if $size == sm {
+    @media screen and (min-width: $sm) {
+      @content;
+    }
+  } @else if $size == md {
+    @media screen and (min-width: $md) {
+      @content;
+    }
+  } @else if $size == lg {
+    @media screen and (min-width: $lg) {
+      @content;
+    }
+  } @else if $size == xl {
+    @media screen and (min-width: $xl) {
+      @content;
+    }
+  } @else if $size == xxl {
+    @media screen and (min-width: $xxl) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $size) {
+      @content;
+    }
+  }
+}
+
+@mixin breakpoint-below($size: lg) {
+  @if $size == sm {
+    @media screen and (max-width: $sm) {
+      @content;
+    }
+  } @else if $size == md {
+    @media screen and (max-width: $md) {
+      @content;
+    }
+  } @else if $size == lg {
+    @media screen and (max-width: $lg) {
+      @content;
+    }
+  } @else if $size == xl {
+    @media screen and (max-width: $xl) {
+      @content;
+    }
+  } @else if $size == xxl {
+    @media screen and (max-width: $xxl) {
+      @content;
+    }
+  } @else {
+    @media screen and (max-width: $size) {
+      @content;
+    }
+  }
+}
+
+@mixin transition($property: all, $duration: 200ms, $easing: cubic-bezier(0.4, 0, 0.2, 1)) {
+  transition: $property $duration $easing;
+}

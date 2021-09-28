@@ -28,7 +28,7 @@
 }
 
 .product-image-container {
-    max-width: 195px;
+    /* max-width: 195px; */
     height: 230px;
     margin: auto;
     position: relative;

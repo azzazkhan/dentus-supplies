@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr)); // 1 Column
   column-gap: 5px;
-  row-gap: 10px;
+  row-gap: 25px;
   padding: 10px 10px 25px;
   @include breakpoint(sm) {
     grid-template-columns: repeat(2, minmax(0, 1fr)); // 1 Column
@@ -41,7 +41,7 @@
     margin: 0 -10px 0;
   }
   @include breakpoint(md) {
-    padding: 15px 15px 25px;
+    margin: 15px 15px 25px;
   }
   .sub-category-item {
     flex-basis: 100%;

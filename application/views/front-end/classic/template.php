@@ -213,8 +213,8 @@
         $("#scrollToSteps").click(function(e) {
             e.preventDefault()
             $([document.documentElement, document.body]).animate({
-                scrollTop: $("#customStepsWrapper").offset().top
-            }, 2000);
+                scrollTop: $("#customStepsWrapper").offset().top,
+            }, 1000);
         });
     </script>
 </body>

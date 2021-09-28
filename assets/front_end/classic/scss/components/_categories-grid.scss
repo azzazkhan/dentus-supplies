@@ -51,13 +51,16 @@
     margin-bottom: 10px;
     @include breakpoint(sm) {
       margin: 0 10px 10px;
+      padding-bottom: 15px;
       flex-basis: calc(50% - 20px);
     }
     @include breakpoint(md) {
       margin-bottom: 15px;
+      padding-bottom: 10px;
       flex-basis: calc(33.333334% - 20px);
     }
     @include breakpoint(lg) {
+      padding-bottom: 0;
       flex-basis: calc(25% - 20px);
     }
   }

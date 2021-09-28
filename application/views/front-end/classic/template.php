@@ -209,6 +209,14 @@
     <?php $this->load->view('front-end/' . THEME . '/pages/' . $main_page); ?>
     <?php $this->load->view('front-end/' . THEME . '/footer'); ?>
     <?php $this->load->view('front-end/' . THEME . '/include-script'); ?>
+    <script type="text/javascript">
+        function scrollToSteps(event) {
+            event.preventDefault()
+            document.querySelector("#customStepsWrapper").scrollIntoView({
+                behavior: "smooth"
+            })
+        }
+    </script>
 </body>
 
 </html>

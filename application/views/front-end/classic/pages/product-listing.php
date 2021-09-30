@@ -140,7 +140,7 @@
                                                 <img class="pic-1 lazy" data-src="<?= $row->image ?>">
                                             </a>
                                             <div class="social">
-                                                <span><?= html_escape($row->name) ?></span>
+                                                <span style="color: white !important;"><?= html_escape($row->name) ?></span>
                                             </div>
                                         </div>
                                     </div>

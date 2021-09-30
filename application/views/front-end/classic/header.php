@@ -10,7 +10,13 @@
  <div id="mySidenav" class="sidenav is-closed-left">
      <div class="container">
          <div class="row my-2 pr-2 text-uppercase d-flex align-items-center">
-             <div class="col-12 text-right close-sidenav"> <a href='#' onclick="closeNav();"><?= !empty($this->lang->line('close')) ? $this->lang->line('close') : 'Close' ?> <i class="fa fa-times"></i></a></div>
+             <div class="col-12 text-right close-sidenav">
+                 <a href="#" onclick="closeNav()">
+                     <?=
+                        !empty($this->lang->line('close')) ? $this->lang->line('close') : 'Close' ?>
+                     <i class="fa fa-times"></i>
+                 </a>
+             </div>
          </div>
      </div>
      <div class="container">

@@ -49,6 +49,9 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
+    .social span {
+      color: white !important;
+    }
     @include breakpoint(sm) {
       margin: 0 10px 10px;
       padding-bottom: 15px;
@@ -68,5 +71,5 @@
 
 .sub-categories-wrapper-main-wrapper {
   background-color: $color-primary;
-  color: white !important;
+  border-radius: 6px;
 }

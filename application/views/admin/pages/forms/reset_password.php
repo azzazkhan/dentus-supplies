@@ -4,7 +4,9 @@
   <div class="card">
     <div class="card-body login-card-body">
       <div class="login-logo">
-        <a href="<?= base_url('admin/login/forgot_password') ?>"><img src="<?= base_url() . $logo ?>"></a>
+        <a href="<?= base_url('admin/login/forgot_password') ?>">
+          <img src="<?= base_url() . $logo ?>" style="width: 100%" />
+        </a>
       </div>
       <p class="login-box-msg">You are only one step a way from your new password, recover your password now.</p>
 

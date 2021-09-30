@@ -131,7 +131,7 @@
                                 <span class="h3"><?= $single_category['name'] ?> <?= !empty($this->lang->line('category')) ? $this->lang->line('category') : 'Category' ?></span>
                             <?php } ?>
                         </div>
-                        <div class="text-center category-section container-fluid">
+                        <div class="sub-categories-wrapper-main-wrapper text-center category-section container-fluid">
                             <div class="sub-categories-wrapper">
                                 <?php foreach ($sub_categories as $key => $row) { ?>
                                     <div class="sub-category-item">

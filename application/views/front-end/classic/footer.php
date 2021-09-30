@@ -17,12 +17,12 @@
                 <?php } ?>
                 <?php if (isset($web_settings['support_number']) && !empty($web_settings['support_number'])) { ?>
                     <div class="col-xl-4 col-md-4 mb-30">
-                        <a href="tel:<?= $web_settings['support_number'] ?>">
+                        <a href="tel:00526643176867">
                             <div class="single-cta">
                                 <i class="fas fa-phone"></i>
                                 <div class="cta-text">
                                     <h4><?= !empty($this->lang->line('call_us')) ? $this->lang->line('call_us') : 'Call us' ?></h4>
-                                    <span><?= $web_settings['support_number'] ?></span>
+                                    <span>+52 (664) 317 - 6867</span>
                                 </div>
                             </div>
                         </a>

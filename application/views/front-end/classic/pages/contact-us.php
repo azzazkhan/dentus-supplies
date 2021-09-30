@@ -19,12 +19,21 @@
                     } */ ?>
                 </div> -->
                 <br /><br />
-                <p style="font-size: 22; font-weight: 600;">
-                    We are located within the “Grand Hotel Tijuana Medical Plaza.
+                <p style="font-size: 22px; font-weight: 600;">
+                    <?=
+                    $this->lang->is_loaded["web_labels_lang.php"] == "spanish"
+                        ? "Estamos ubicados dentro del “Grand Hotel Tijuana Medical Plaza."
+                        : "We are located within the “Grand Hotel Tijuana Medical Plaza."
+                    ?>
+
                 </p>
                 <br /><br />
-                <p style="font-size: 22; font-weight: 600;">
-                    Parking lot: At the “Grand Hotel Tijuana Medical Plaza” there is parking located inside the Hotel, for your convenience.
+                <p style="font-size: 22px; font-weight: 600;">
+                    <?=
+                    $this->lang->is_loaded["web_labels_lang.php"] == "spanish"
+                        ? "Estacionamiento: En el “Grand Hotel Tijuana Medical Plaza” hay estacionamiento ubicado dentro del Hotel, para su comodidad."
+                        : "Parking lot: At the “Grand Hotel Tijuana Medical Plaza” there is parking located inside the Hotel, for your convenience."
+                    ?>
                 </p>
             </div>
             <div class="col-md-5 login-form">
@@ -33,22 +42,44 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputEmail4"><?= !empty($this->lang->line('username')) ? $this->lang->line('username') : 'Username' ?></label>
-                            <input type="text" class="form-control" id="inputEmail4" name="username" placeholder="Your Name">
+                            <input type="text" class="form-control" id="inputEmail4" name="username" placeholder="<?=
+                                                                                                                    $this->lang->is_loaded["web_labels_lang.php"] == "spanish"
+                                                                                                                        ? "Tu nombre"
+                                                                                                                        : "Your name"
+                                                                                                                    ?>" />
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputPassword4"><?= !empty($this->lang->line('email')) ? $this->lang->line('email') : 'Email' ?></label>
-                            <input type="email" class="form-control" id="inputPassword4" name="email" placeholder="Your Email">
+                            <input type="email" class="form-control" id="inputPassword4" name="email" placeholder="<?=
+                                                                                                                    $this->lang->is_loaded["web_labels_lang.php"] == "spanish"
+                                                                                                                        ? "Tu correo electrónico"
+                                                                                                                        : "Your email"
+                                                                                                                    ?>" />
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputAddress"><?= !empty($this->lang->line('subject')) ? $this->lang->line('subject') : 'Subject' ?></label>
-                        <input type="text" class="form-control" id="inputAddress" name="subject" placeholder="Subject">
+                        <input type="text" class="form-control" id="inputAddress" name="subject" placeholder="<?=
+                                                                                                                $this->lang->is_loaded["web_labels_lang.php"] == "spanish"
+                                                                                                                    ? "Tu nombre"
+                                                                                                                    : "Sujeta"
+                                                                                                                ?>" />
                     </div>
                     <div class="form-group">
                         <label for="inputAddress"><?= !empty($this->lang->line('message')) ? $this->lang->line('message') : 'Message' ?></label>
-                        <textarea class="form-control" name="message" rows="4" cols="58"></textarea>
+                        <textarea class="form-control" name="message" rows="4" cols="58" placeholder="<?=
+                                                                                                        $this->lang->is_loaded["web_labels_lang.php"] == "spanish"
+                                                                                                            ? "Enviar mensaje"
+                                                                                                            : "Send Message"
+                                                                                                        ?>"></textarea>
                     </div>
-                    <button id="contact-us-submit-btn" class="block btn-5"><?= !empty($this->lang->line('send_message')) ? $this->lang->line('send_message') : 'Send Message' ?></button>
+                    <button id="contact-us-submit-btn" class="block btn-5">
+                        <?=
+                        !empty($this->lang->line('send_message')) ?
+                            $this->lang->line('send_message') :
+                            'Send Message'
+                        ?>
+                    </button>
                 </form>
             </div>
         </div>

@@ -1,0 +1,48 @@
+.about-content {
+  width: 85%;
+  margin: 0 auto;
+  div {
+    margin-bottom: 30px;
+    h1 {
+      font-weight: 600;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    p,
+    li {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.35em;
+    }
+    ul,
+    ul li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    ul li {
+      margin-bottom: 15px;
+      strong {
+        position: relative;
+        font-weight: bold !important;
+        &::before {
+          content: "";
+          position: absolute;
+          background-image: url("/uploads/media/2021/icon.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          top: calc(50% + 2px);
+          left: -15px;
+          display: block;
+          height: 25px;
+          width: 25px;
+          transform: translate(-100%, -50%);
+        }
+        &::after {
+          content: ":";
+        }
+      }
+    }
+  }
+}

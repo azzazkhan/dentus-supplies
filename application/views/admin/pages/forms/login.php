@@ -1,14 +1,16 @@
 <?php if (ALLOW_MODIFICATION == 0) { ?>
-<div class="alert alert-warning">
-    Note: If you cannot login here, please close the codecanyon frame by clicking on x Remove Frame button from top right corner on the page or <a href="<?=base_url('/admin')?>" target="_blank" class="text-danger">>> Click here <<</a>
-</div>
+    <div class="alert alert-warning">
+        Note: If you cannot login here, please close the codecanyon frame by clicking on x Remove Frame button from top right corner on the page or <a href="<?= base_url('/admin') ?>" target="_blank" class="text-danger">>> Click here <<< /a>
+    </div>
 <?php } ?>
 <div class="login-box">
     <!-- /.login-logo -->
     <div class="card container-fluid ">
         <div class="card-body login-card-body">
             <div class="login-logo">
-                <a href="<?= base_url() . 'admin/login' ?>"><img src="<?= base_url() . $logo ?>" ></a>
+                <a href="<?= base_url() . 'admin/login' ?>">
+                    <img src="<?= base_url() . $logo ?>" style="width: 100%" />
+                </a>
             </div>
             <p class="login-box-msg">Sign in to start your session</p>
 

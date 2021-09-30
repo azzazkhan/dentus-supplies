@@ -19,7 +19,7 @@
                     } */ ?>
                 </div> -->
                 <br /><br />
-                <p style="font-size: 22px; font-weight: 600;">
+                <p style="color: #3a3b3c; font-size: 20px; font-weight: 600;">
                     <?=
                     $this->lang->is_loaded["web_labels_lang.php"] == "spanish"
                         ? "Estamos ubicados dentro del “Grand Hotel Tijuana Medical Plaza."
@@ -28,7 +28,7 @@
 
                 </p>
                 <br /><br />
-                <p style="font-size: 22px; font-weight: 600;">
+                <p style="color: #3a3b3c; font-size: 20px; font-weight: 600;">
                     <?=
                     $this->lang->is_loaded["web_labels_lang.php"] == "spanish"
                         ? "Estacionamiento: En el “Grand Hotel Tijuana Medical Plaza” hay estacionamiento ubicado dentro del Hotel, para su comodidad."
@@ -67,17 +67,13 @@
                     </div>
                     <div class="form-group">
                         <label for="inputAddress"><?= !empty($this->lang->line('message')) ? $this->lang->line('message') : 'Message' ?></label>
-                        <textarea class="form-control" name="message" rows="4" cols="58" placeholder="<?=
-                                                                                                        $this->lang->is_loaded["web_labels_lang.php"] == "spanish"
-                                                                                                            ? "Enviar mensaje"
-                                                                                                            : "Send Message"
-                                                                                                        ?>"></textarea>
+                        <textarea class="form-control" name="message" rows="4" cols="58"></textarea>
                     </div>
-                    <button id="contact-us-submit-btn" class="block btn-5">
+                    <button id="contact-us-submit-btn" class="block btn-5" style="margin-bottom: 15px;">
                         <?=
-                        !empty($this->lang->line('send_message')) ?
-                            $this->lang->line('send_message') :
-                            'Send Message'
+                        $this->lang->is_loaded["web_labels_lang.php"] == "spanish"
+                            ? "Enviar mensaje"
+                            : "Send Message"
                         ?>
                     </button>
                 </form>

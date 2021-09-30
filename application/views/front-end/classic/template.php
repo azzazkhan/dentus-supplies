@@ -214,7 +214,7 @@
             e.preventDefault()
             $([document.documentElement, document.body]).animate({
                 scrollTop: $("#customStepsWrapper").offset().top,
-            }, 1000);
+            }, 100);
         });
     </script>
 </body>

@@ -137,7 +137,7 @@
                                     <div class="sub-category-item">
                                         <div class="category-image w-75">
                                             <a href="<?= base_url('products/category/' . html_escape($row->slug)) ?>">
-                                                <img class="pic-1 lazy" data-src="<?= $row->image ?>">
+                                                <img class="pic-1 lazy" style="max-width: 120px" data-src="<?= $row->image ?>">
                                             </a>
                                             <div class="social">
                                                 <span style="color: white !important;"><?= html_escape($row->name) ?></span>

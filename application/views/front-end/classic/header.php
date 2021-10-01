@@ -44,7 +44,7 @@ $web_settings = get_settings('web_settings', true);
                     <ul class="nano-content">
                         <li>
                             <a href="<?= base_url() ?>">
-                                <i class="fas fa-box-open fa-lg"></i>
+                                <i class="fas fa-home fa-lg"></i>
                                 <span>
                                     <?= !empty($this->lang->line('home')) ? $this->lang->line('home') : 'Home' ?>
                                 </span>

@@ -209,14 +209,6 @@
     <?php $this->load->view('front-end/' . THEME . '/pages/' . $main_page); ?>
     <?php $this->load->view('front-end/' . THEME . '/footer'); ?>
     <?php $this->load->view('front-end/' . THEME . '/include-script'); ?>
-    <script type="text/javascript">
-        $("#scrollToSteps").click(function(e) {
-            e.preventDefault()
-            $([document.documentElement, document.body]).animate({
-                scrollTop: $("#customStepsWrapper").offset().top,
-            }, 100);
-        });
-    </script>
 </body>
 
 </html>

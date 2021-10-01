@@ -681,7 +681,7 @@ $custom_steps = [
     ],
 ];
 ?>
-<div class="steps-wrapper" id="customStepsWrapper">
+<div class="steps-wrapper" id="howDoesItWorks">
     <?php
     for ($i = 0; $i < count($custom_steps); $i++) :
         $step = $custom_steps[$i];

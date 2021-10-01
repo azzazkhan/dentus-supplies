@@ -51,7 +51,7 @@ $web_settings = get_settings('web_settings', true);
                             </a>
                         </li>
                         <li>
-                            <a href="<?= base_url('/#customStepsWrapper') ?>">
+                            <a href="<?= base_url('/#howDoesItWorks') ?>">
                                 <i class="far fa-question-circle fa-lg"></i>
                                 <span>
                                     <?=
@@ -420,7 +420,7 @@ $web_settings = get_settings('web_settings', true);
                                             <a href="<?= base_url() ?>"><?= !empty($this->lang->line('home')) ? $this->lang->line('home') : 'Home' ?></a>
                                         </li>
                                         <li class="morph-text">
-                                            <a href="<?= base_url('/#customStepsWrapper') ?>" id="scrollToSteps">
+                                            <a href="<?= base_url('/#howDoesItWorks') ?>" id="scrollToSteps">
                                                 <?=
                                                 $this->lang->is_loaded["web_labels_lang.php"] == "spanish" ? "¿Cómo funciona?" : "How does it works?";
                                                 ?>

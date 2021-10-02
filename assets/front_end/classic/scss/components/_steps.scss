@@ -20,7 +20,7 @@
   .step {
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: stretch;
     padding: 0 15px;
     max-width: 300px;
@@ -36,15 +36,20 @@
       align-items: center;
       padding: 5px 0;
     }
-    .icon-wrapper img {
-      height: 55px;
-      width: 55px;
+    .icon-wrapper {
+      flex-grow: 0;
+      flex-shrink: 0;
+      img {
+        height: 55px;
+        width: 55px;
+      }
     }
     .content-wrapper {
       font-size: 16px;
       font-weight: 500;
       line-height: 1.36em;
-      flex: 1;
+      flex-grow: 1;
+      flex-shrink: 0;
       justify-content: flex-start;
       margin-left: 5px;
       .overlay {

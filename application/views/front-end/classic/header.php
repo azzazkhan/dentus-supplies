@@ -42,6 +42,7 @@ $web_settings = get_settings('web_settings', true);
             <aside class="sidebar">
                 <div id="leftside-navigation" class="nano">
                     <ul class="nano-content">
+                        <!-- Home -->
                         <li>
                             <a href="<?= base_url() ?>">
                                 <i class="fas fa-home fa-lg"></i>
@@ -50,6 +51,7 @@ $web_settings = get_settings('web_settings', true);
                                 </span>
                             </a>
                         </li>
+                        <!-- How Does It Works? -->
                         <li>
                             <a href="<?= base_url('/#howDoesItWorks') ?>">
                                 <i class="far fa-question-circle fa-lg"></i>
@@ -60,78 +62,14 @@ $web_settings = get_settings('web_settings', true);
                                 </span>
                             </a>
                         </li>
+                        <!-- Products -->
                         <li>
                             <a href="<?= base_url('products') ?>">
                                 <i class="fas fa-box-open fa-lg"></i>
                                 <span><?= !empty($this->lang->line('products')) ? $this->lang->line('products') : 'Products' ?></span>
                             </a>
                         </li>
-                        <?php if ($this->ion_auth->logged_in()) : ?>
-                            <li>
-                                <a href="<?= base_url('my-account/wallet') ?>">
-                                    <i class="fa fa-wallet fa-lg"></i>
-                                    <?= !empty($this->lang->line('balance')) ? $this->lang->line('balance') : 'Balance' ?>
-                                    <?= ' : ' . $settings['currency'] . ' ' . $user->balance ?>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="<?= base_url('my-account') ?>">
-                                    <i class="far fa-user-circle fa-lg"></i>
-                                    <?= !empty($this->lang->line('my_account')) ? $this->lang->line('my_account') : 'My Account' ?>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="<?= base_url('my-account/orders') ?>">
-                                    <i class="fa fa-history fa-lg"></i>
-                                    <?= !empty($this->lang->line('my_orders')) ? $this->lang->line('my_orders') : 'My Orders' ?>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="<?= base_url('my-account/favorites') ?>">
-                                    <i class="far fa-heart fa-lg"></i>
-                                    <?= !empty($this->lang->line('favorite')) ? $this->lang->line('favorite') : 'Favorite' ?>
-                                </a>
-                            </li>
-                        <?php else : ?>
-                            <!-- <li>
-                                <a href="" class="auth_model" data-izimodal-open=".auth-modal" data-value="login">
-                                    <i class="far fa-user-circle fa-lg"></i>
-                                    <?= !empty($this->lang->line('my_account')) ? $this->lang->line('my_account') : 'My Account' ?>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="" class="auth_model" data-izimodal-open=".auth-modal" data-value="login">
-                                    <i class="fa fa-history fa-lg"></i>
-                                    <?= !empty($this->lang->line('my_orders')) ? $this->lang->line('my_orders') : 'My Orders' ?>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="" class="auth_model" data-izimodal-open=".auth-modal" data-value="login">
-                                    <i class="far fa-heart fa-lg"></i>
-                                    <?= !empty($this->lang->line('favorite')) ? $this->lang->line('favorite') : 'Favorite' ?>
-                                </a>
-                            </li> -->
-                            <li>
-                                <a href="" class="auth_model" data-izimodal-open=".auth-modal" data-value="login">
-                                    <i class="fa fa-sign-in-alt fa-lg"></i>
-                                    <?= !empty($this->lang->line('login')) ? $this->lang->line('login') : 'Login' ?>
-                                </a>
-                            </li>
-                            <!-- <li>
-                                <a href="" class="auth_model" data-izimodal-open=".auth-modal" data-value="register">
-                                    <i class="fa fa-user-check fa-lg"></i>
-                                    <?= !empty($this->lang->line('register')) ? $this->lang->line('register') : 'Register' ?>
-                                </a>
-                            </li> -->
-                        <?php endif; ?>
-                        <li>
-                            <a href="<?= base_url('home/about-us') ?>">
-                                <i class="fa fa-info fa-lg"></i>
-                                <span>
-                                    <?= !empty($this->lang->line('about_us')) ? $this->lang->line('about_us') : 'About Us' ?>
-                                </span>
-                            </a>
-                        </li>
+                        <!-- Contact Us -->
                         <li>
                             <a href="<?= base_url('home/contact-us') ?>">
                                 <i class="fa fa-envelope fa-lg"></i>
@@ -140,14 +78,94 @@ $web_settings = get_settings('web_settings', true);
                                 </span>
                             </a>
                         </li>
-                        <?php if ($this->ion_auth->logged_in()) { ?>
+                        <!-- About Us -->
+                        <li>
+                            <a href="<?= base_url('home/about-us') ?>">
+                                <i class="fa fa-info fa-lg"></i>
+                                <span>
+                                    <?= !empty($this->lang->line('about_us')) ? $this->lang->line('about_us') : 'About Us' ?>
+                                </span>
+                            </a>
+                        </li>
+                        <!-- Auth Links End (User + Guest) -->
+                        <?php if ($this->ion_auth->logged_in()) : ?>
+                            <!-- My Balance -->
+                            <li>
+                                <a href="<?= base_url('my-account/wallet') ?>">
+                                    <i class="fa fa-wallet fa-lg"></i>
+                                    <?= !empty($this->lang->line('balance')) ? $this->lang->line('balance') : 'Balance' ?>
+                                    <?= ' : ' . $settings['currency'] . ' ' . $user->balance ?>
+                                </a>
+                            </li>
+                            <!-- My Account -->
+                            <li>
+                                <a href="<?= base_url('my-account') ?>">
+                                    <i class="far fa-user-circle fa-lg"></i>
+                                    <?= !empty($this->lang->line('my_account')) ? $this->lang->line('my_account') : 'My Account' ?>
+                                </a>
+                            </li>
+                            <!-- My Orders -->
+                            <li>
+                                <a href="<?= base_url('my-account/orders') ?>">
+                                    <i class="fa fa-history fa-lg"></i>
+                                    <?= !empty($this->lang->line('my_orders')) ? $this->lang->line('my_orders') : 'My Orders' ?>
+                                </a>
+                            </li>
+                            <!-- My Favorites -->
+                            <li>
+                                <a href="<?= base_url('my-account/favorites') ?>">
+                                    <i class="far fa-heart fa-lg"></i>
+                                    <?= !empty($this->lang->line('favorite')) ? $this->lang->line('favorite') : 'Favorite' ?>
+                                </a>
+                            </li>
+                        <?php else: ?>
+                            <!-- My Account (Opens Auth Popup) -->
+                            <!-- <li>
+                                <a href="" class="auth_model" data-izimodal-open=".auth-modal" data-value="login">
+                                    <i class="far fa-user-circle fa-lg"></i>
+                                    <?= !empty($this->lang->line('my_account')) ? $this->lang->line('my_account') : 'My Account' ?>
+                                </a>
+                            </li> -->
+                            <!-- My Orders (Opens Auth Popup) -->
+                            <!-- <li>
+                                <a href="" class="auth_model" data-izimodal-open=".auth-modal" data-value="login">
+                                    <i class="fa fa-history fa-lg"></i>
+                                    <?= !empty($this->lang->line('my_orders')) ? $this->lang->line('my_orders') : 'My Orders' ?>
+                                </a>
+                            </li> -->
+                            <!-- My Favorites (Opens Auth Popup) -->
+                            <!-- <li>
+                                <a href="" class="auth_model" data-izimodal-open=".auth-modal" data-value="login">
+                                    <i class="far fa-heart fa-lg"></i>
+                                    <?= !empty($this->lang->line('favorite')) ? $this->lang->line('favorite') : 'Favorite' ?>
+                                </a>
+                            </li> -->
+                            <!-- Login (Opens Auth Popup) -->
+                            <li>
+                                <a href="" class="auth_model" data-izimodal-open=".auth-modal" data-value="login">
+                                    <i class="fa fa-sign-in-alt fa-lg"></i>
+                                    <?= !empty($this->lang->line('login')) ? $this->lang->line('login') : 'Login' ?>
+                                </a>
+                            </li>
+                            <!-- Register (Opens Auth Popup) -->
+                            <!-- <li>
+                                <a href="" class="auth_model" data-izimodal-open=".auth-modal" data-value="register">
+                                    <i class="fa fa-user-check fa-lg"></i>
+                                    <?= !empty($this->lang->line('register')) ? $this->lang->line('register') : 'Register' ?>
+                                </a>
+                            </li> -->
+                        <?php endif; ?>
+                        <!-- Auth Links End (User + Guest) -->
+                        <!-- Logout -->
+                        <?php if ($this->ion_auth->logged_in()): ?>
                             <li>
                                 <a href="<?= base_url('login/logout') ?>">
                                     <i class="fa fa-sign-out-alt fa-lg"></i>
                                     <?= !empty($this->lang->line('logout')) ? $this->lang->line('logout') : 'Logout' ?>
                                 </a>
                             </li>
-                        <?php } ?>
+                        <?php endif; ?>
+                        <!-- Language Selection -->
                         <li class="sub-menu">
                             <a href="javascript:void(0);">
                                 <i class="fa fa-language fa-lg"></i>

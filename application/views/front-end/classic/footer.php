@@ -1,47 +1,47 @@
-<?php $web_settings = get_settings('web_settings', true); ?>
+<?php $web_settings = get_settings('web_settings', true);?>
 <!-- footer starts -->
 <div class="footer-section-footer" id="dark-footer">
     <div class="main-content footer-con">
         <div class="footer-cta pt-5 pb-5">
             <div class="row">
-                <?php if (isset($web_settings['address']) && !empty($web_settings['address'])) { ?>
+                <?php if (isset($web_settings['address']) && !empty($web_settings['address'])) {?>
                     <div class="col-xl-4 col-md-4 mb-30">
                         <div class="single-cta">
                             <i class="fas fa-map-marker-alt"></i>
                             <div class="cta-text">
-                                <h4><?= !empty($this->lang->line('find_us')) ? $this->lang->line('find_us') : 'Find us' ?></h4>
-                                <span><?= output_escaping(str_replace('\r\n', '</br>', $web_settings['address'])) ?></span>
+                                <h4><?=!empty($this->lang->line('find_us')) ? $this->lang->line('find_us') : 'Find us'?></h4>
+                                <span><?=output_escaping(str_replace('\r\n', '</br>', $web_settings['address']))?></span>
                             </div>
                         </div>
                     </div>
-                <?php } ?>
-                <?php if (isset($web_settings['support_number']) && !empty($web_settings['support_number'])) { ?>
+                <?php }?>
+                <?php if (isset($web_settings['support_number']) && !empty($web_settings['support_number'])) {?>
                     <div class="col-xl-4 col-md-4 mb-30">
                         <a href="tel:00526643176867">
                             <div class="single-cta">
                                 <i class="fas fa-phone"></i>
                                 <div class="cta-text">
-                                    <h4><?= !empty($this->lang->line('call_us')) ? $this->lang->line('call_us') : 'Call us' ?></h4>
+                                    <h4><?=!empty($this->lang->line('call_us')) ? $this->lang->line('call_us') : 'Call us'?></h4>
                                     <span>+52 (664) 317 - 6867</span>
                                 </div>
                             </div>
                         </a>
                     </div>
-                <?php } ?>
+                <?php }?>
 
-                <?php if (isset($web_settings['support_email']) && !empty($web_settings['support_email'])) { ?>
+                <?php if (isset($web_settings['support_email']) && !empty($web_settings['support_email'])) {?>
                     <div class="col-xl-4 col-md-4 mb-30">
-                        <a href="mailto:<?= $web_settings['support_email'] ?>">
+                        <a href="mailto:<?=$web_settings['support_email']?>">
                             <div class="single-cta">
                                 <i class="far fa-envelope-open"></i>
                                 <div class="cta-text">
-                                    <h4><?= !empty($this->lang->line('mail_us')) ? $this->lang->line('mail_us') : 'Mail us' ?></h4>
-                                    <span><?= $web_settings['support_email'] ?></span>
+                                    <h4><?=!empty($this->lang->line('mail_us')) ? $this->lang->line('mail_us') : 'Mail us'?></h4>
+                                    <span><?=$web_settings['support_email']?></span>
                                 </div>
                             </div>
                         </a>
                     </div>
-                <?php } ?>
+                <?php }?>
             </div>
         </div>
         <div class="footer-content-footer pt-5 pb-5">
@@ -49,57 +49,63 @@
                 <div class="col-lg-3 mb-50">
                     <div class="footer-widget">
                         <div class="footer-logo-footer">
-                            <?php $logo = get_settings('web_logo'); ?>
-                            <a href="<?= base_url() ?>"><img src="<?= base_url($logo) ?>" alt="logo"></a>
+                            <?php $logo = get_settings('web_logo');?>
+                            <a href="<?=base_url()?>"><img src="<?=base_url($logo)?>" alt="logo"></a>
                         </div>
                         <div class="footer-social-icon">
-                            <span><?= !empty($this->lang->line('follow_us')) ? $this->lang->line('follow_us') : 'Follow us' ?></span>
-                            <?php if (isset($web_settings['facebook_link']) &&  !empty($web_settings['facebook_link'])) { ?>
-                                <a href="<?= $web_settings['facebook_link'] ?>" target="_blank"><i class="fab fa-facebook-f rounded-icon clr-facebbok"></i></a>
-                            <?php } ?>
-                            <?php if (isset($web_settings['twitter_link']) && !empty($web_settings['twitter_link'])) { ?>
-                                <a href="<?= $web_settings['twitter_link'] ?>" target="_blank"><i class="fab fa-linkedin-in rounded-icon clr-twitter"></i></a>
-                            <?php } ?>
-                            <?php if (isset($web_settings['instagram_link']) &&  !empty($web_settings['instagram_link'])) { ?>
-                                <a href="<?= $web_settings['instagram_link'] ?>" target="_blank"><i class="fab fa-instagram rounded-icon clr-insta"></i></a>
-                            <?php } ?>
-                            <?php if (isset($web_settings['youtube_link']) &&  !empty($web_settings['youtube_link'])) { ?>
-                                <a href="<?= $web_settings['youtube_link'] ?>" target="_blank"><i class="fab fa-youtube rounded-icon clr-youtube"></i></a>
-                            <?php } ?>
+                            <span><?=!empty($this->lang->line('follow_us')) ? $this->lang->line('follow_us') : 'Follow us'?></span>
+                            <?php if (isset($web_settings['facebook_link']) && !empty($web_settings['facebook_link'])) {?>
+                                <a href="<?=$web_settings['facebook_link']?>" target="_blank"><i class="fab fa-facebook-f rounded-icon clr-facebbok"></i></a>
+                            <?php }?>
+                            <?php if (isset($web_settings['twitter_link']) && !empty($web_settings['twitter_link'])) {?>
+                                <a href="<?=$web_settings['twitter_link']?>" target="_blank"><i class="fab fa-linkedin-in rounded-icon clr-twitter"></i></a>
+                            <?php }?>
+                            <?php if (isset($web_settings['instagram_link']) && !empty($web_settings['instagram_link'])) {?>
+                                <a href="<?=$web_settings['instagram_link']?>" target="_blank"><i class="fab fa-instagram rounded-icon clr-insta"></i></a>
+                            <?php }?>
+                            <?php if (isset($web_settings['youtube_link']) && !empty($web_settings['youtube_link'])) {?>
+                                <a href="<?=$web_settings['youtube_link']?>" target="_blank"><i class="fab fa-youtube rounded-icon clr-youtube"></i></a>
+                            <?php }?>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-6 mb-50">
                     <div class="footer-widget">
                         <div class="footer-widget-heading">
-                            <h3><?= !empty($this->lang->line('about_us')) ? $this->lang->line('about_us') : 'About Us' ?></h3>
+                            <h3><?=!empty($this->lang->line('about_us')) ? $this->lang->line('about_us') : 'About Us'?></h3>
                         </div>
                         <div class="footer-text">
-                            <?php if (isset($web_settings['app_short_description'])) { ?>
-                                <p><?= $web_settings['app_short_description'] ?></p>
-                            <?php } ?>
+                            <?php if ($this->lang->is_loaded["web_labels_lang.php"] == "spanish"): ?>
+                                <p>
+                                    Somos una empresa dedica a la adquisición, almacenamiento, distribución y transporte de medicamentos, dispositivos médicos y demás insumos para la salud.
+                                </p>
+                            <?php else: ?>
+                                <p>
+                                    We are a company dedicated to the acquisition, storage, distribution and transportation of medicines, medical devices and other health supplies.
+                                </p>
+                            <?php endif;?>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-30">
                     <div class="footer-widget">
                         <div class="footer-widget-heading">
-                            <h3><?= !empty($this->lang->line('useful_links')) ? $this->lang->line('useful_links') : 'Useful Links' ?></h3>
+                            <h3><?=!empty($this->lang->line('useful_links')) ? $this->lang->line('useful_links') : 'Useful Links'?></h3>
                         </div>
                         <ul>
-                            <li><a href="<?= base_url() ?>"><?= !empty($this->lang->line('home')) ? $this->lang->line('home') : 'Home' ?></a></li>
-                            <li><a href="<?= base_url('home/categories') ?>"><?= !empty($this->lang->line('category')) ? $this->lang->line('category') : 'Shop by Categories' ?></a></li>
-                            <li><a href="<?= base_url('products') ?>"><?= !empty($this->lang->line('products')) ? $this->lang->line('products') : 'Products' ?></a></li>
-                            <?php if ($this->ion_auth->logged_in()) { ?>
-                                <li><a href="<?= base_url('my-account') ?>"><?= !empty($this->lang->line('my_account')) ? $this->lang->line('my_account') : 'My Account' ?></a></li>
-                                <li><a href="<?= base_url('my-account/orders') ?>"><?= !empty($this->lang->line('my_orders')) ? $this->lang->line('my_orders') : 'My Orders' ?></a></li>
-                                <li><a href="<?= base_url('my-account/favorites') ?>"><?= !empty($this->lang->line('favorite')) ? $this->lang->line('favorite') : 'Favorite' ?></a></li>
-                            <?php } else { ?>
-                                <li><a href="" class="auth_model" data-izimodal-open=".auth-modal" data-value="login"><?= !empty($this->lang->line('login')) ? $this->lang->line('login') : 'Login' ?></a></li>
-                                <li><a href="" class="auth_model" data-izimodal-open=".auth-modal" data-value="register"><?= !empty($this->lang->line('register')) ? $this->lang->line('register') : 'Register' ?></a></li>
-                            <?php } ?>
-                            <li><a href="<?= base_url('home/about-us') ?>"><?= !empty($this->lang->line('about_us')) ? $this->lang->line('about_us') : 'About Us' ?></a></li>
-                            <li><a href="<?= base_url('home/contact-us') ?>"><?= !empty($this->lang->line('contact_us')) ? $this->lang->line('contact_us') : 'Contact Us' ?></a></li>
+                            <li><a href="<?=base_url()?>"><?=!empty($this->lang->line('home')) ? $this->lang->line('home') : 'Home'?></a></li>
+                            <li><a href="<?=base_url('home/categories')?>"><?=!empty($this->lang->line('category')) ? $this->lang->line('category') : 'Shop by Categories'?></a></li>
+                            <li><a href="<?=base_url('products')?>"><?=!empty($this->lang->line('products')) ? $this->lang->line('products') : 'Products'?></a></li>
+                            <?php if ($this->ion_auth->logged_in()) {?>
+                                <li><a href="<?=base_url('my-account')?>"><?=!empty($this->lang->line('my_account')) ? $this->lang->line('my_account') : 'My Account'?></a></li>
+                                <li><a href="<?=base_url('my-account/orders')?>"><?=!empty($this->lang->line('my_orders')) ? $this->lang->line('my_orders') : 'My Orders'?></a></li>
+                                <li><a href="<?=base_url('my-account/favorites')?>"><?=!empty($this->lang->line('favorite')) ? $this->lang->line('favorite') : 'Favorite'?></a></li>
+                            <?php } else {?>
+                                <li><a href="" class="auth_model" data-izimodal-open=".auth-modal" data-value="login"><?=!empty($this->lang->line('login')) ? $this->lang->line('login') : 'Login'?></a></li>
+                                <li><a href="" class="auth_model" data-izimodal-open=".auth-modal" data-value="register"><?=!empty($this->lang->line('register')) ? $this->lang->line('register') : 'Register'?></a></li>
+                            <?php }?>
+                            <li><a href="<?=base_url('home/about-us')?>"><?=!empty($this->lang->line('about_us')) ? $this->lang->line('about_us') : 'About Us'?></a></li>
+                            <li><a href="<?=base_url('home/contact-us')?>"><?=!empty($this->lang->line('contact_us')) ? $this->lang->line('contact_us') : 'Contact Us'?></a></li>
                         </ul>
                     </div>
                 </div>
@@ -112,23 +118,24 @@
                 <div class="col-xl-6 col-lg-6 text-center text-lg-left">
                     <div class="copyright-text">
                         <p>
-                            Copyright &copy;
-                            <?= date('Y') ?>,
-                            All Right Reserved
-                            <a target="_blank" href="<?= base_url('/') ?>">
-                                Dentus Supplies
-                            </a>
+                            <?php if ($this->lang->is_loaded["web_labels_lang.php"] == "spanish"): ?>
+                                Derechos de autor &copy; <?=date('Y')?> &mdash; Reservados todos los derechos
+                                <a target="_blank" rel="noreferrer" href="<?=base_url('/')?>">Dentus Supplies</a>
+                            <?php else: ?>
+                                Copyright &copy; <?=date('Y')?> &mdash; All Rights Reserved
+                                <a target="_blank" rel="noreferrer" href="<?=base_url('/')?>">Dentus Supplies</a>
+                            <?php endif;?>
                         </p>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
                     <div class="footer-menu">
                         <ul>
-                            <li><a href="<?= base_url() ?>"><?= !empty($this->lang->line('home')) ? $this->lang->line('home') : 'Home' ?></a></li>
-                            <li><a href="<?= base_url('home/terms-and-conditions') ?>"><?= !empty($this->lang->line('terms_and_condition')) ? $this->lang->line('terms_and_condition') : 'Terms & Conditions' ?></a></li>
-                            <li><a href="<?= base_url('home/privacy-policy') ?>"><?= !empty($this->lang->line('privacy_policy')) ? $this->lang->line('privacy_policy') : 'Privacy Policy' ?></a></li>
-                            <li><a href="<?= base_url('home/about-us') ?>"><?= !empty($this->lang->line('about_us')) ? $this->lang->line('about_us') : 'About Us' ?></a></li>
-                            <li><a href="<?= base_url('home/contact-us') ?>"><?= !empty($this->lang->line('contact_us')) ? $this->lang->line('contact_us') : 'Contact Us' ?></a></li>
+                            <li><a href="<?=base_url()?>"><?=!empty($this->lang->line('home')) ? $this->lang->line('home') : 'Home'?></a></li>
+                            <li><a href="<?=base_url('home/terms-and-conditions')?>"><?=!empty($this->lang->line('terms_and_condition')) ? $this->lang->line('terms_and_condition') : 'Terms & Conditions'?></a></li>
+                            <li><a href="<?=base_url('home/privacy-policy')?>"><?=!empty($this->lang->line('privacy_policy')) ? $this->lang->line('privacy_policy') : 'Privacy Policy'?></a></li>
+                            <li><a href="<?=base_url('home/about-us')?>"><?=!empty($this->lang->line('about_us')) ? $this->lang->line('about_us') : 'About Us'?></a></li>
+                            <li><a href="<?=base_url('home/contact-us')?>"><?=!empty($this->lang->line('contact_us')) ? $this->lang->line('contact_us') : 'Contact Us'?></a></li>
                         </ul>
                     </div>
                 </div>
@@ -158,7 +165,7 @@
     </div>
 </section> <!-- end newsletter modal -->
 
-<?php if (ALLOW_MODIFICATION == 0) { ?>
+<?php if (ALLOW_MODIFICATION == 0) {?>
     <!-- color switcher -->
     <div id="colors-switcher">
         <h6>Pick Your Favorite Color</h6>
@@ -195,16 +202,16 @@
             <a href="#" class="settings bg-white d-block"><i class="fa fa-cog fa-lg fa-spin setting-icon"></i></a>
         </div>
     </div> <!-- end color switcher -->
-<?php } ?>
+<?php }?>
 
 <div id="modal-custom" class="auth-modal" data-iziModal-group="group1">
     <button data-iziModal-close class="icon-close">x</button>
     <header>
-        <a href="" id="login"><?= !empty($this->lang->line('login')) ? $this->lang->line('login') : 'Login' ?></a>
-        <a href="" id="register" class="active"><?= !empty($this->lang->line('register')) ? $this->lang->line('register') : 'Register' ?></a>
+        <a href="" id="login"><?=!empty($this->lang->line('login')) ? $this->lang->line('login') : 'Login'?></a>
+        <a href="" id="register" class="active"><?=!empty($this->lang->line('register')) ? $this->lang->line('register') : 'Register'?></a>
     </header>
     <section class="hide" id="login_div">
-        <form action="<?= base_url('home/login') ?>" class='form-submit-event' method="post">
+        <form action="<?=base_url('home/login')?>" class='form-submit-event' method="post">
             <div class="input-group">
                 <input type="text" class="form-control" name="identity" placeholder="Mobile number" value="" required>
             </div>
@@ -212,11 +219,11 @@
                 <input type="password" class="form-control" name="password" placeholder="Password" value="" required>
             </div>
             <div class="mb-4 text-right">
-                <a href="<?= base_url() ?>" id="forgot_password_link"><?= !empty($this->lang->line('forgot_password')) ? $this->lang->line('forgot_password') : 'Forgot Password' ?> ?</a>
+                <a href="<?=base_url()?>" id="forgot_password_link"><?=!empty($this->lang->line('forgot_password')) ? $this->lang->line('forgot_password') : 'Forgot Password'?> ?</a>
             </div>
             <footer>
-                <button type="button" data-iziModal-close><?= !empty($this->lang->line('cancel')) ? $this->lang->line('cancel') : 'Cancel' ?></button>
-                <button type="submit" class="submit_btn  btn btn-primary btn-block"><?= !empty($this->lang->line('login')) ? $this->lang->line('login') : 'Login' ?></button>
+                <button type="button" data-iziModal-close><?=!empty($this->lang->line('cancel')) ? $this->lang->line('cancel') : 'Cancel'?></button>
+                <button type="submit" class="submit_btn  btn btn-primary btn-block"><?=!empty($this->lang->line('login')) ? $this->lang->line('login') : 'Login'?></button>
             </footer>
             <br>
             <div class="d-flex justify-content-center">
@@ -241,11 +248,11 @@
                 </div>
             </div>
             <footer>
-                <button type="button" data-iziModal-close><?= !empty($this->lang->line('cancel')) ? $this->lang->line('cancel') : 'Cancel' ?></button>
-                <button id='send-otp-button'><?= !empty($this->lang->line('send_otp')) ? $this->lang->line('send_otp') : 'Send OTP' ?></button>
+                <button type="button" data-iziModal-close><?=!empty($this->lang->line('cancel')) ? $this->lang->line('cancel') : 'Cancel'?></button>
+                <button id='send-otp-button'><?=!empty($this->lang->line('send_otp')) ? $this->lang->line('send_otp') : 'Send OTP'?></button>
             </footer>
         </form>
-        <form id='verify-otp-form' class='verify-otp-form d-none' action='<?= base_url('auth/register-user') ?>' method="POST">
+        <form id='verify-otp-form' class='verify-otp-form d-none' action='<?=base_url('auth/register-user')?>' method="POST">
             <div class="row sign-up-verify-number">
                 <div class="col-12 d-flex justify-content-center pb-4">
                     <input type="text" class='form-input' placeholder="OTP" id="otp" name="otp" autocomplete="off">
@@ -264,8 +271,8 @@
                 </div>
             </div>
             <footer>
-                <button data-iziModal-close><?= !empty($this->lang->line('cancel')) ? $this->lang->line('cancel') : 'Cancel' ?></button>
-                <button type="submit" id='register_submit_btn'><?= !empty($this->lang->line('submit')) ? $this->lang->line('submit') : 'Submit' ?></button>
+                <button data-iziModal-close><?=!empty($this->lang->line('cancel')) ? $this->lang->line('cancel') : 'Cancel'?></button>
+                <button type="submit" id='register_submit_btn'><?=!empty($this->lang->line('submit')) ? $this->lang->line('submit') : 'Submit'?></button>
             </footer>
         </form>
         <form id='sign-up-form' class='sign-up-form collapse' action='#'>
@@ -274,13 +281,13 @@
             <input type="password" placeholder="Password" name='password' class='form-input' required>
             <div id='sign-up-error' class='text-center p-3'></div>
             <footer>
-                <button type="button" data-iziModal-close><?= !empty($this->lang->line('cancel')) ? $this->lang->line('cancel') : 'Cancel' ?></button>
-                <button type='submit'><?= !empty($this->lang->line('register')) ? $this->lang->line('register') : 'Register' ?></button>
+                <button type="button" data-iziModal-close><?=!empty($this->lang->line('cancel')) ? $this->lang->line('cancel') : 'Cancel'?></button>
+                <button type='submit'><?=!empty($this->lang->line('register')) ? $this->lang->line('register') : 'Register'?></button>
             </footer>
         </form>
     </section>
     <section class="hide pt-0" id="forgot_password_div">
-        <div class="text-center h5"><?= !empty($this->lang->line('forgot_password')) ? $this->lang->line('forgot_password') : 'Forgot Password' ?></div>
+        <div class="text-center h5"><?=!empty($this->lang->line('forgot_password')) ? $this->lang->line('forgot_password') : 'Forgot Password'?></div>
         <hr class="mt-0">
         <form id="send_forgot_password_otp_form" method="POST" action="#">
             <div class="input-group">
@@ -290,8 +297,8 @@
                 <div id="recaptcha-container-2"></div>
             </div>
             <footer>
-                <button type="button" data-iziModal-close><?= !empty($this->lang->line('cancel')) ? $this->lang->line('cancel') : 'Cancel' ?></button>
-                <button type="submit" id="forgot_password_send_otp_btn" class="submit_btn  btn btn-primary btn-block"><?= !empty($this->lang->line('send_otp')) ? $this->lang->line('send_otp') : 'Send OTP' ?></button>
+                <button type="button" data-iziModal-close><?=!empty($this->lang->line('cancel')) ? $this->lang->line('cancel') : 'Cancel'?></button>
+                <button type="submit" id="forgot_password_send_otp_btn" class="submit_btn  btn btn-primary btn-block"><?=!empty($this->lang->line('send_otp')) ? $this->lang->line('send_otp') : 'Send OTP'?></button>
             </footer>
             <br>
             <div class="d-flex justify-content-center">
@@ -306,8 +313,8 @@
                 <input type="password" class="form-control" name="new_password" placeholder="New Password" value="" required>
             </div>
             <footer>
-                <button type="button" data-iziModal-close><?= !empty($this->lang->line('cancel')) ? $this->lang->line('cancel') : 'Cancel' ?></button>
-                <button type="submit" class="submit_btn  btn btn-primary btn-block" id="reset_password_submit_btn"><?= !empty($this->lang->line('submit')) ? $this->lang->line('submit') : 'Submit' ?></button>
+                <button type="button" data-iziModal-close><?=!empty($this->lang->line('cancel')) ? $this->lang->line('cancel') : 'Cancel'?></button>
+                <button type="submit" class="submit_btn  btn btn-primary btn-block" id="reset_password_submit_btn"><?=!empty($this->lang->line('submit')) ? $this->lang->line('submit') : 'Submit'?></button>
             </footer>
             <br>
             <div class="d-flex justify-content-center">
@@ -365,10 +372,10 @@
             </div>
             <div class="pt-4 pb-4 text-center text-md-left">
                 <div class="button button-sm m-0 p-0">
-                    <button class="buttons primary-button m-0 add_to_cart" id="modal-add-to-cart-button"><i class="fas fa-cart-plus"></i> <?= !empty($this->lang->line('add_to_cart')) ? $this->lang->line('add_to_cart') : 'Add To Cart' ?></button>
+                    <button class="buttons primary-button m-0 add_to_cart" id="modal-add-to-cart-button"><i class="fas fa-cart-plus"></i> <?=!empty($this->lang->line('add_to_cart')) ? $this->lang->line('add_to_cart') : 'Add To Cart'?></button>
                 </div>
                 <div class="button button-sm m-0 p-0">
-                    <button class="buttons red-button m-0" id="add_to_favorite_btn"><i class="far fa-heart"></i> <span><?= !empty($this->lang->line('add_to_favorite')) ? $this->lang->line('add_to_favorite') : 'Add to Favorite' ?></span></button>
+                    <button class="buttons red-button m-0" id="add_to_favorite_btn"><i class="far fa-heart"></i> <span><?=!empty($this->lang->line('add_to_favorite')) ? $this->lang->line('add_to_favorite') : 'Add to Favorite'?></span></button>
                 </div>
             </div>
 
@@ -382,11 +389,11 @@
     </div>
 </div>
 
-<?php if (ALLOW_MODIFICATION == 0) { ?>
+<?php if (ALLOW_MODIFICATION == 0) {?>
     <div class="buy-now-btn">
         <a href="https://codecanyon.net/item/eshop-multipurpose-ecommercestore-website/31071809" target="_blank" class="btn btn-danger"> <i class="fa fa-shopping-cart"></i> Buy Now</a>
     </div>
-<?php } ?>
+<?php }?>
 
 <!-- end -->
 <!-- main content ends -->

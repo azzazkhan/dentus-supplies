@@ -37,6 +37,7 @@
   align-items: flex-start;
   flex-wrap: wrap;
   padding: 10px 10px 20px;
+  margin-bottom: 40px;
   @include breakpoint(sm) {
     margin: 0 -10px 0;
   }

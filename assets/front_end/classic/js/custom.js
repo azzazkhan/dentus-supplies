@@ -696,7 +696,7 @@ $(function () {
                     '<input type="hidden" name="' + csrfName + '" value="' + csrfHash + '">' +
                     '<input type="text" class="form-control" id="zipcode" placeholder="Zipcode" name="zipcode" required value="' + data.zipcode + '">' +
                     '</div>' +
-                    '<button type="submit" class="button button-primary-outline m-0" data-product_id="' + data.id + '"  data-zipcode="' + data.zipcode + '"  id="validate_zipcode">Check Availability</button>' +
+                    '<button type="submit" class="button button-primary-outline m-0" data-product_id="' + data.id + '"  data-zipcode="' + data.zipcode + '"  id="validate_zipcode">Consultar Disponibilidad</button>' +
                     '</div>' +
                     '<div class="mt-2" id="error_box1">' +
                     err_msg +
@@ -3255,7 +3255,7 @@ $('#validate-zipcode-form').on('submit', function (e) {
         dataType: "json",
         success: function (result) {
             csrfHash = result.csrfHash;
-            $('#validate_zipcode').html('Check Availability').attr('disabled', false);
+            $('#validate_zipcode').html('Consultar disponibilidad').attr('disabled', false);
             if (result.error == false) {
                 $('#add_cart').removeAttr('disabled');
                 $('#error_box').html(result.message);
@@ -3284,7 +3284,7 @@ $(document).on('submit', '.validate_zipcode_quick_view', function (e) {
         dataType: "json",
         success: function (result) {
             csrfHash = result.csrfHash;   
-            $('#validate_zipcode').html('Check Availability').attr('disabled', false);
+            $('#validate_zipcode').html('Consultar Disponibilidad').attr('disabled', false);
             if (result.error == false) {
                 $('#modal-add-to-cart-button').removeAttr('disabled');
                 $('#error_box1').html(result.message);

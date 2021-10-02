@@ -246,7 +246,7 @@
                         <input type="hidden" name="product_id" value="<?= $product['product'][0]['id'] ?>">
                         <input type="text" class="form-control" id="zipcode" placeholder="Zipcode" name="zipcode" autocomplete="off" required value="<?= $product['product'][0]['zipcode']; ?>">
                     </div>
-                    <button type="submit" class="button button-primary-outline" id="validate_zipcode">Check Availability</button>
+                    <button type="submit" class="button button-primary-outline" id="validate_zipcode">Consultar Disponibilidad</button>
                 </div>
                 <div class="mt-2" id="error_box">
                     <?php if (!empty($product['product'][0]['zipcode'])) { ?>

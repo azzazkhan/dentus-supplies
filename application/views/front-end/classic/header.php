@@ -51,6 +51,17 @@ $web_settings = get_settings('web_settings', true);
                                 </span>
                             </a>
                         </li>
+                        <!-- How Does It Works? -->
+                        <li>
+                            <a href="<?=base_url('/#howDoesItWorks')?>" onclick="closeNav()">
+                                <i class="far fa-question-circle fa-lg"></i>
+                                <span>
+                                    <?=
+$this->lang->is_loaded["web_labels_lang.php"] == "spanish" ? "¿Cómo funciona?" : "How does it works?";
+?>
+                                </span>
+                            </a>
+                        </li>
                         <!-- Products -->
                         <li>
                             <a href="<?=base_url('products')?>">

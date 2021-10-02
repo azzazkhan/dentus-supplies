@@ -5,7 +5,9 @@
     <div class="card">
       <div class="card-body login-card-body">
         <div class="login-logo">
-          <a href="<?= base_url('admin') ?>"><img src="<?= base_url() . $logo ?>"></a>
+          <a href="<?= base_url('admin') ?>">
+            <img src="<?= base_url() . $logo ?>" style="width: 100%" />
+          </a>
         </div>
         <p class="login-box-msg">You forgot your password?<br>Here you can easily retrieve a new password.</p>
 

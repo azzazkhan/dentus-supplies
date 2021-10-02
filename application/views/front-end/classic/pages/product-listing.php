@@ -1,7 +1,18 @@
 <!-- breadcrumb -->
 <section class="breadcrumb-title-bar colored-breadcrumb">
     <div class="main-content responsive-breadcrumb">
-        <h1><?= isset($page_main_bread_crumb) ? $page_main_bread_crumb : 'Product Listing' ?></h1>
+        <h1>
+            <?php
+            $output = 'Product Listing';
+            // if (isset($page_main_bread_crumb))
+            //     $output = $page_main_bread_crumb;
+            // elseif ($this->lang->is_loaded["web_labels_lang.php"] == 'spanish')
+            //     $output = 'LISTA DE PRODUCTOS';
+            if ($this->lang->is_loaded["web_labels_lang.php"] == 'spanish')
+                $output = 'LISTA DE PRODUCTOS';
+            print($output);
+            ?>
+        </h1>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?= base_url() ?>"><?= !empty($this->lang->line('home')) ? $this->lang->line('home') : 'Home' ?></a></li>
@@ -120,16 +131,16 @@
                                 <span class="h3"><?= $single_category['name'] ?> <?= !empty($this->lang->line('category')) ? $this->lang->line('category') : 'Category' ?></span>
                             <?php } ?>
                         </div>
-                        <div class="text-center category-section container-fluid">
-                            <div class="row">
+                        <div class="sub-categories-wrapper-main-wrapper text-center category-section container-fluid">
+                            <div class="sub-categories-wrapper">
                                 <?php foreach ($sub_categories as $key => $row) { ?>
-                                    <div class="col-md-2 col-sm-6">
+                                    <div class="sub-category-item">
                                         <div class="category-image w-75">
                                             <a href="<?= base_url('products/category/' . html_escape($row->slug)) ?>">
-                                                <img class="pic-1 lazy" data-src="<?= $row->image ?>">
+                                                <img class="pic-1 lazy" style="max-width: 120px" data-src="<?= $row->image ?>">
                                             </a>
                                             <div class="social">
-                                                <span><?= html_escape($row->name) ?></span>
+                                                <span style="color: white !important;"><?= html_escape($row->name) ?></span>
                                             </div>
                                         </div>
                                     </div>

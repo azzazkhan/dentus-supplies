@@ -3677,14 +3677,14 @@ background-color: #494;
 
     .cd-morph-dropdown .main-nav>ul>li>a {
         display: block;
-        padding: 0 1.8em;
         line-height: 33px;
         color: #fff;
-        font-size: 1.0rem;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         -webkit-transition: opacity .2s;
         transition: opacity .2s;
+        padding: 0 0.75rem;
+        font-size: 1rem;
     }
 
     .cd-morph-dropdown.is-dropdown-visible .main-nav>ul>li>a {

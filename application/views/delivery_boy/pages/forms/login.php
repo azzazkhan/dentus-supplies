@@ -9,7 +9,9 @@
     <div class="card container-fluid ">
         <div class="card-body login-card-body">
             <div class="login-logo">
-                <a href="<?= base_url() . 'delivery_boy/login' ?>"><img src="<?= base_url() . $logo ?>"></a>
+                <a href="<?= base_url() . 'delivery_boy/login' ?>">
+                    <img src="<?= base_url() . $logo ?>" style="width: 100%" />
+                </a>
             </div>
             <p class="login-box-msg">Sign in to start your session</p>
             <form action="<?= base_url('delivery_boy/login/auth') ?>" class='form-submit-event' method="post">

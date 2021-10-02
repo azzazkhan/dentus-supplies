@@ -6,9 +6,9 @@
             </div>
             <hr>
         </div>
-        <div class="row">
+        <div class="main-categories-wrapper">
             <?php foreach ($categories as $key => $row) { ?>
-                <div class="category-grid col-md-2 col-sm-6">
+                <div class="category-item">
                     <div class="category-image justify-content-center d-flex w-50">
                         <div class="category-image-container">
                             <a href="<?= base_url('products/category/' . html_escape($row['slug'])) ?>">
